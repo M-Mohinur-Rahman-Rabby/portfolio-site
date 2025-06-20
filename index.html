@@ -2,47 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | M Mohinur Rahman Rabby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Mohinur Rahman Rabby | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
-    <h1>M Mohinur Rahman Rabby</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications & Activities</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="site-title">M Mohinur Rahman Rabby</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="miscellaneous.html">Certifications</a></li>
+          <li><a href="professional-experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Welcome to My Academic Portfolio</h2>
-      <p id="hero-text" class="typing-effect"></p>
-      <a href="M_Mohinur_Rahman_Rabby_CV.pdf" class="btn" target="_blank" rel="noopener">Download CV</a>
+      <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm a Chemical Engineering student and an aspiring researcher, passionate about sustainable technologies.</p>
+        <a href="M_Mohinur_Rahman_Rabby_CV.pdf" class="btn" target="_blank">Download CV</a>
+      </div>
     </section>
 
-    <section class="achievements">
-
-    </section>
-
-    <section class="quote">
-      <blockquote>
-        “Dedicated to advancing sustainable chemical engineering through innovative research.”
-      </blockquote>
+    <section class="about">
+      <div class="container">
+        <h3>About Me</h3>
+        <p>With a background in Chemical Engineering, my research focuses on sustainable chemical processes and advanced materials. I'm currently exploring renewable energy technologies and their real-world applications.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    <div class="container">
+      <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    </div>
   </footer>
 
-  <script src="script.js" defer></script>
 </body>
 </html>
