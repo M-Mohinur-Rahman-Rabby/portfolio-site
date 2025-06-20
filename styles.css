@@ -1,28 +1,14 @@
-/* Global Reset */
-* {
+/* General styling for the website */
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #f9fafb;
-  color: #333;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
+  background-color: #f4f4f9;
+  color: #444;
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -30,8 +16,8 @@ ul {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #004e89, #00b4d8);
-  padding: 1rem;
+  background-color: #3b5323; /* Olive color */
+  padding: 1rem 0;
 }
 
 header .site-title {
@@ -44,7 +30,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1rem;
+  list-style-type: none;
 }
 
 nav ul li a {
@@ -57,32 +43,39 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-  background-color: #00b4d8;
+  background-color: #800080; /* Purple color */
   color: white;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
-  background: linear-gradient(135deg, #00b4d8, #004e89);
-  color: white;
+  background: #e0e0e0;
+  color: #444;
   padding: 6rem 2rem;
+}
+
+.hero-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .hero h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.25rem;
-  margin-bottom: 2rem;
 }
 
 .hero .btn {
-  background-color: #00b4d8;
+  background-color: #800080; /* Purple */
   color: white;
   padding: 1rem 2rem;
+  text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 6px;
@@ -90,10 +83,10 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .hero .btn:hover {
-  background-color: #004e89;
+  background-color: #3b5323; /* Olive */
 }
 
-/* Modal Styles */
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -101,25 +94,18 @@ nav ul li a:hover, nav ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
 
 .modal-content {
-  background-color: #fff;
+  background: white;
   padding: 2rem;
   border-radius: 8px;
   max-width: 80%;
   max-height: 80vh;
   overflow-y: auto;
-}
-
-.modal-content iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
 }
 
 .close-modal {
@@ -134,29 +120,23 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .close-modal:hover {
-  color: #00b4d8;
+  color: #800080; /* Purple */
 }
 
 /* Section Styling */
-section {
-  margin-bottom: 3rem;
-}
-
 section h2 {
   font-size: 2.5rem;
-  color: #004e89;
+  color: #3b5323; /* Olive color */
   margin-bottom: 1rem;
-  font-weight: bold;
 }
 
 section p {
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 1.5rem;
 }
 
 button.open-modal-documents {
-  background-color: #00b4d8;
+  background-color: #800080; /* Purple */
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -168,82 +148,12 @@ button.open-modal-documents {
 }
 
 button.open-modal-documents:hover {
-  background-color: #004e89;
-}
-
-.documents-list {
-  list-style: none;
-}
-
-.documents-list li {
-  margin-bottom: 1rem;
-}
-
-.documents-list a {
-  color: #00b4d8;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.documents-list a:hover {
-  text-decoration: underline;
-}
-
-/* Card Styles */
-.publication-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  margin: 1rem 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.publication-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.publication-card h3 {
-  color: #004e89;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-.toggle-abstract-btn {
-  background-color: #00b4d8;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.toggle-abstract-btn:hover {
-  background-color: #004e89;
-}
-
-.abstract {
-  display: none;
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #666;
-}
-
-.abstract a {
-  color: #00b4d8;
-  text-decoration: none;
-}
-
-.abstract a:hover {
-  text-decoration: underline;
+  background-color: #3b5323; /* Olive */
 }
 
 /* Footer */
 footer {
-  background-color: #004e89;
+  background-color: #3b5323; /* Olive */
   color: white;
   padding: 1rem;
   text-align: center;
@@ -273,37 +183,10 @@ footer p {
 
 /* Contact Section */
 .contact-info a {
-  color: #00b4d8;
+  color: #800080; /* Purple */
   font-weight: bold;
 }
 
 .contact-info a:hover {
   text-decoration: underline;
-}
-
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  section h2 {
-    font-size: 2rem;
-  }
-
-  .publication-card, .project-card {
-    padding: 1.5rem;
-  }
-
-  .container {
-    width: 95%;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
 }
