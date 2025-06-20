@@ -46,7 +46,7 @@ modal.addEventListener('click', (e) => {
 const texts = [
   "Chemical Engineering Student",
   "Aspiring PhD Candidate",
-  "Available for remote, voluntary research collaboration in chemical and biochemical engineering"
+  
 ];
 let currentTextIndex = 0;
 let charIndex = 0;
