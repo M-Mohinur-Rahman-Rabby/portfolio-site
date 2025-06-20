@@ -14,26 +14,39 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="projects.html">Projects</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="contact-info">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:mohinur@example.com">mohinur@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/mohinurrahman" target="_blank">M Mohinur Rahman Rabby</a></p>
-      <p>ResearchGate: <a href="https://www.researchgate.net/profile/M-Mohinur-Rabby" target="_blank">M Mohinur Rahman Rabby</a></p>
-      <p>GitHub: <a href="https://github.com/username" target="_blank">M Mohinur Rahman Rabby</a></p>
+    <section class="social-media">
+      <h2>Connect with Me</h2>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/m-mohinur-rahman-rabby" class="social-icon" target="_blank">
+          <img src="images/linkedin-icon.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Rakibul-Hasan-Rafi-2002" class="social-icon" target="_blank">
+          <img src="images/github-icon.png" alt="GitHub">
+        </a>
+        <a href="https://www.researchgate.net/profile/M-Mohinur-Rabby" class="social-icon" target="_blank">
+          <img src="images/researchgate-icon.png" alt="ResearchGate">
+        </a>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
+
+  <script>
+    // Social media interaction
+    document.querySelectorAll('.social-icon').forEach(icon => {
+      icon.addEventListener('click', () => {
+        icon.classList.add('fly-icon');
+      });
+    });
+  </script>
 </body>
 </html>
