@@ -5,8 +5,7 @@ const closeModalBtns = document.querySelectorAll('.close-modal');
 // Open modal when clicking an element (like a button or card)
 document.querySelectorAll('.open-modal-documents').forEach(button => {
   button.addEventListener('click', () => {
-    // Open the modal for the corresponding section
-    const targetModal = document.querySelector(button.getAttribute('data-target-modal'));
+    const targetModal = document.getElementById(button.getAttribute('data-target-modal'));
     targetModal.style.display = 'flex';
   });
 });
@@ -14,7 +13,7 @@ document.querySelectorAll('.open-modal-documents').forEach(button => {
 // Close the modal when the close button is clicked
 closeModalBtns.forEach(closeBtn => {
   closeBtn.addEventListener('click', () => {
-    modals.forEach(modal => { 
+    modals.forEach(modal => {
       modal.style.display = 'none';
     });
   });
@@ -26,5 +25,12 @@ modals.forEach(modal => {
     if (e.target === modal) {
       modal.style.display = 'none';
     }
+  });
+});
+
+// Social Media Interaction (Flying Icons)
+document.querySelectorAll('.social-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.add('fly-icon');
   });
 });
