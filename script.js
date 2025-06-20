@@ -14,7 +14,7 @@ document.querySelectorAll('.open-modal-documents').forEach(button => {
 // Close the modal when the close button is clicked
 closeModalBtns.forEach(closeBtn => {
   closeBtn.addEventListener('click', () => {
-    modals.forEach(modal => {
+    modals.forEach(modal => { 
       modal.style.display = 'none';
     });
   });
