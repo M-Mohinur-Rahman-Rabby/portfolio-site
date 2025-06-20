@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | M Mohinur Rahman Rabby</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -14,10 +13,9 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
           <li><a href="education.html">Education</a></li>
-          <li><a href="research.html" aria-current="page">Research</a></li>
-          <li><a href="miscellaneous.html">Certifications & Activities</a></li>
-          <li><a href="professional-experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -25,110 +23,26 @@
   </header>
 
   <main>
-    <section class="research-publications">
+    <section class="research-papers">
       <div class="container">
         <h2>Q1 Journal Papers</h2>
-        <div class="publications-grid">
-
-          <!-- Paper 1 -->
-          <article class="publication-card">
-            <h3>Isolation and characterization of CNC from waste maize cob available in Bangladesh as a potential candidate for the fabrication of multifunctional bio-nanocomposites: A new approach</h3>
+        <div class="papers-grid">
+          <article class="paper-card">
+            <h3>Paper 1 Title</h3>
             <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="abstract1">Show Abstract</button>
             <div class="abstract" id="abstract1" aria-hidden="true">
-              <p>This paper discusses the optimization of chemical processes in bioreactors. The study focuses on using MATLAB to enhance enzyme production yield.</p>
-              <a href="papers/Paper-1.pdf" target="_blank" rel="noopener">Read full paper</a>
+              <p>This paper explores...</p>
+              <a href="papers/Paper1.pdf" target="_blank">Read full paper</a>
             </div>
           </article>
-
-          <!-- Paper 2 -->
-          <article class="publication-card">
-            <h3>Production of CNC from agro-waste biomass (maize shells) as a potential reinforcement in bio-nanocomposites: Extraction, modification, and characterization study</h3>
-            <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="abstract2">Show Abstract</button>
-            <div class="abstract" id="abstract2" aria-hidden="true">
-              <p>This research investigates the role of renewable energy technologies in industrial applications and their environmental benefits.</p>
-              <a href="papers/Paper-2.pdf" target="_blank" rel="noopener">Read full paper</a>
-            </div>
-          </article>
-
-          <!-- Paper 3 -->
-          <article class="publication-card">
-            <h3>Production of functionalized clay-CNC based biopolymeric nanocomposite from agro-waste biomass for bulky industrial wastewater treatment via continuous column adsorption study with mathematical modeling: A critical review</h3>
-            <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="abstract3">Show Abstract</button>
-            <div class="abstract" id="abstract3" aria-hidden="true">
-              <p>This paper explores novel methods in wastewater treatment using advanced filtration technologies and computational models for improved sustainability.</p>
-              <a href="papers/Paper-3.pdf" target="_blank" rel="noopener">Read full paper</a>
-            </div>
-          </article>
-
+          <!-- Repeat for other papers -->
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 M Mohinur Rahman Rabby</p>
-    </div>
+    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
-
-  <!-- Modal for displaying the paper -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <button class="close-modal">&times;</button>
-      <h2>Full Paper PDF</h2>
-      <iframe id="modal-pdf" src="" width="100%" height="600px"></iframe>
-    </div>
-  </div>
-
-  <script>
-    // Toggle Abstract Visibility
-    document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const abstract = document.getElementById(button.getAttribute('aria-controls'));
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-
-        if (abstract) {
-          if (expanded) {
-            abstract.style.display = 'none';
-            button.setAttribute('aria-expanded', 'false');
-            button.textContent = 'Show Abstract';
-            abstract.setAttribute('aria-hidden', 'true');
-          } else {
-            abstract.style.display = 'block';
-            button.setAttribute('aria-expanded', 'true');
-            button.textContent = 'Hide Abstract';
-            abstract.setAttribute('aria-hidden', 'false');
-          }
-        }
-      });
-    });
-
-    // Modal for PDF Viewer
-    const modal = document.getElementById('modal');
-    const modalPdf = document.getElementById('modal-pdf');
-    const closeModalBtn = document.querySelector('.close-modal');
-
-    document.querySelectorAll('.publication-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const pdfPath = card.querySelector('a').getAttribute('href');
-        modalPdf.src = pdfPath;
-        modal.style.display = 'flex';
-      });
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalPdf.src = ''; // Clear the PDF source when closing
-    });
-
-    // Close modal if the backdrop is clicked
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        modalPdf.src = '';
-      }
-    });
-  </script>
-
 </body>
 </html>
