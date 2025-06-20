@@ -1,124 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research | M Mohinur Rahman Rabby</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <h1>Research Papers</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="research.html" aria-current="page">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications & Activities</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <main>
-    <section>
-      <h2>Q1 Journal Papers</h2>
-      <div class="publications-grid">
-        <!-- Paper 1 -->
-        <article class="publication-card">
-          <h3>Isolation and characterization of CNC from waste maize cob available in Bangladesh as a potential candidate for the fabrication of multifunctional bio-nanocomposites: A new approach</h3>
-          <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="abstract1">Show Abstract</button>
-          <div class="abstract" id="abstract1" aria-hidden="true">
-            <p>This paper discusses the optimization of chemical processes in bioreactors. The study focuses on using MATLAB to enhance enzyme production yield.</p>
-            <a href="papers/Paper-1.pdf" target="_blank" rel="noopener">Read full paper</a>
-          </div>
-        </article>
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: #f9fafb;
+  line-height: 1.6;
+}
 
-        <!-- Paper 2 -->
-        <article class="publication-card">
-          <h3>Production of CNC from agro-waste biomass (maize shells) as a potential reinforcement in bio-nanocomposites: Extraction, modification, and characterization study</h3>
-          <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="abstract2">Show Abstract</button>
-          <div class="abstract" id="abstract2" aria-hidden="true">
-            <p>This research investigates the role of renewable energy technologies in industrial applications and their environmental benefits.</p>
-            <a href="papers/Paper-2.pdf" target="_blank" rel="noopener">Read full paper</a>
-          </div>
-        </article>
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-        <!-- Paper 3 -->
-        <article class="publication-card">
-          <h3>Production of functionalized clay-CNC based biopolymeric nanocomposite from agro-waste biomass for bulky industrial wastewater treatment via continuous column adsorption study with mathematical modeling: A critical review</h3>
-          <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="abstract3">Show Abstract</button>
-          <div class="abstract" id="abstract3" aria-hidden="true">
-            <p>This paper explores novel methods in wastewater treatment using advanced filtration technologies and computational models for improved sustainability.</p>
-            <a href="papers/Paper=3.pdf" target="_blank" rel="noopener">Read full paper</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+/* Header */
+header {
+  background-color: #004e89;
+  padding: 1rem;
+  color: white;
+}
 
-  <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
-  </footer>
+header .site-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
 
-  <!-- Modal for displaying the paper -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <button class="close-modal">&times;</button>
-      <h2>Full Paper PDF</h2>
-      <iframe id="modal-pdf" src="" width="100%" height="600px"></iframe>
-    </div>
-  </div>
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 
-  <script>
-    // Toggle Abstract Visibility
-    document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const abstract = document.getElementById(button.getAttribute('aria-controls'));
-        const expanded = button.getAttribute('aria-expanded') === 'true';
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-        if (abstract) {
-          if (expanded) {
-            abstract.style.display = 'none';
-            button.setAttribute('aria-expanded', 'false');
-            button.textContent = 'Show Abstract';
-            abstract.setAttribute('aria-hidden', 'true');
-          } else {
-            abstract.style.display = 'block';
-            button.setAttribute('aria-expanded', 'true');
-            button.textContent = 'Hide Abstract';
-            abstract.setAttribute('aria-hidden', 'false');
-          }
-        }
-      });
-    });
+header nav ul li a:hover,
+header nav ul li a[aria-current="page"] {
+  color: #00b4d8;
+}
 
-    // Modal for PDF Viewer
-    const modal = document.getElementById('modal');
-    const modalPdf = document.getElementById('modal-pdf');
-    const closeModalBtn = document.querySelector('.close-modal');
+/* Research Section */
+.research-publications {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    document.querySelectorAll('.publication-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const pdfPath = card.querySelector('a').getAttribute('href');
-        modalPdf.src = pdfPath;
-        modal.style.display = 'flex';
-      });
-    });
+.research-publications h2 {
+  font-size: 2rem;
+  color: #004e89;
+  margin-bottom: 2rem;
+}
 
-    closeModalBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalPdf.src = ''; // Clear the PDF source when closing
-    });
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
 
-    // Close modal if the backdrop is clicked
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        modalPdf.src = '';
-      }
-    });
-  </script>
-</body>
-</html>
+.publication-card {
+  background-color: #f0f8ff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.publication-card h3 {
+  font-size: 1.4rem;
+  color: #0077b6;
+}
+
+.toggle-abstract-btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-abstract-btn:hover {
+  background-color: #00b4d8;
+}
+
+.abstract {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+  display: none;
+}
+
+.abstract a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.abstract a:hover {
+  color: #00b4d8;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #0077b6;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
