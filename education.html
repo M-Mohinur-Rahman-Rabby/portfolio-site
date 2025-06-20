@@ -8,26 +8,32 @@
 </head>
 <body>
   <header>
-    <h1>Education & Certificates</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html" aria-current="page">Education</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications & Activities</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="site-title">Education & Certificates</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html" aria-current="page">Education</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="miscellaneous.html">Certifications & Activities</a></li>
+          <li><a href="professional-experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="timeline">
-      <article class="degree">
-        <h2>B.Sc. Chemical & Food Process Engineering</h2>
-        <p><strong>Rajshahi University of Engineering & Technology</strong></p>
-        <button class="open-modal-documents">View Certificates</button>
-      </article>
+    <section class="education-timeline">
+      <div class="container">
+        <article class="degree">
+          <h2>B.Sc. Chemical & Food Process Engineering</h2>
+          <p><strong>Rajshahi University of Engineering & Technology</strong></p>
+          <p><strong>Thesis:</strong> Investigation of Sustainable Chemical Processes in Food Engineering</p>
+          <p><strong>Advisor:</strong> Dr. XYZ</p>
+          <button class="open-modal-documents">View Certificates</button>
+        </article>
+      </div>
     </section>
 
     <div id="modal" class="modal">
@@ -47,7 +53,9 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    <div class="container">
+      <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    </div>
   </footer>
 
   <script>
@@ -55,9 +63,11 @@
     document.querySelector('.open-modal-documents').addEventListener('click', () => {
       modal.style.display = 'flex';
     });
+
     document.querySelector('.close-modal').addEventListener('click', () => {
       modal.style.display = 'none';
     });
   </script>
+
 </body>
 </html>
