@@ -1,4 +1,4 @@
-/* Global Reset */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +21,7 @@ ul {
   list-style: none;
 }
 
+/* Container */
 .container {
   width: 80%;
   max-width: 1200px;
@@ -137,19 +138,22 @@ nav ul li a:hover, nav ul li a.active {
   color: #800080; /* Purple */
 }
 
-/* Section Styling */
-section h2 {
-  font-size: 2.5rem;
+/* Education Section */
+.degree-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.degree-section h2 {
   color: #3b5323; /* Olive */
-  margin-bottom: 1rem;
 }
 
-section p {
-  font-size: 1.2rem;
+.degree-section p {
   color: #666;
+  font-size: 1.2rem;
 }
 
-button.open-modal-documents {
+.modal-buttons button {
   background-color: #800080; /* Purple */
   color: white;
   padding: 1rem 2rem;
@@ -161,8 +165,68 @@ button.open-modal-documents {
   transition: background-color 0.3s ease;
 }
 
-button.open-modal-documents:hover {
+.modal-buttons button:hover {
   background-color: #3b5323; /* Olive */
+}
+
+.documents-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.documents-list li {
+  margin: 1rem 0;
+}
+
+.documents-list a {
+  color: #800080; /* Purple */
+  font-size: 1.1rem;
+}
+
+.documents-list a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #800080;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fly-icon {
+  animation: fly 2s ease forwards;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-200px) rotate(360deg);
+  }
 }
 
 /* Footer */
@@ -195,12 +259,16 @@ footer p {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Section */
-.contact-info a {
-  color: #800080; /* Purple */
-  font-weight: bold;
+/* Hover effects for all links */
+a {
+  text-decoration: none;
 }
 
-.contact-info a:hover {
+a:hover {
   text-decoration: underline;
+}
+
+/* Smooth Scroll for Anchors */
+html {
+  scroll-behavior: smooth;
 }
