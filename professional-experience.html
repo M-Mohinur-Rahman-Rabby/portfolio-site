@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Experience | M Mohinur Rahman Rabby</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Professional Experience</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="miscellaneous.html">Certifications & Activities</a></li>
+        <li><a href="professional-experience.html" aria-current="page">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Industrial Experience</h2>
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="exp-title">Jamuna Fertilizer Company Limited (JFCL)</div>
+          <div class="exp-role">Industrial Trainee (March 2023 - April 2023)</div>
+          <p class="exp-details">
+            Conducted site visits to the wastewater treatment plant, gaining insights into industrial effluent management and treatment processes. Collaborated with teams to improve waste minimization and resource recovery strategies.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <div class="exp-title">PRAN_RFL GROUP</div>
+          <div class="exp-role">Assistant Manager</div>
+          <p class="exp-details">
+            Gained exposure to the production processes of various industrial operations. Strengthened practical knowledge relevant to chemical and environmental engineering.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tutoring Experience</h2>
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="exp-role">Chemistry Tutor (2022 - Present)</div>
+          <p class="exp-details">
+            Tutored high school students in chemistry, focusing on inorganic, organic, and physical chemistry. Provided lesson plans and materials tailored to their needs, improving their confidence and grades.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <div class="exp-title">Udvash Academic & Admission Care</div>
+          <div class="exp-role">Question & Answer Teacher (2023 - 2025)</div>
+          <p class="exp-details">
+           Taught hundreds of students across multiple STEM subjects, including Physics, Chemistry, Mathematics, Biology, and Statistics. Enhanced analytical thinking and problem-solving skills for high school students.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <div class="exp-title">Private Tutor for Chemistry and Physics</div>
+          <div class="exp-role">Tutor (2018 - Present)</div>
+          <p class="exp-details">
+            Conducted one-on-one tutoring sessions, helping students improve their understanding of chemistry and physics concepts through personalized lesson plans and problem-solving practice.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certificates</h2>
+      <div class="certifications-grid">
+        <div class="cert-card" data-pdf="certificates/jfcl_certificate.pdf">
+          <img src="certificates/thumbnails/jfcl_certificate.png" alt="JFCL Industrial Trainee Certificate" class="cert-thumbnail" />
+          <div class="cert-title">JFCL Industrial Trainee</div>
+        </div>
+        <div class="cert-card" data-pdf="certificates/udvash_teacher_certificate.pdf">
+          <img src="certificates/thumbnails/udvash_certificate.png" alt="Udvash Teacher Certificate" class="cert-thumbnail" />
+          <div class="cert-title">Udvash Teacher Certificate</div>
+        </div>
+        <!-- Add more certificates here if necessary -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+  </footer>
+
+  <!-- Modal for displaying certificate PDF -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>Certificate PDF</h2>
+      <iframe id="modal-pdf" src="" width="100%" height="600px"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const modalPdf = document.getElementById('modal-pdf');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    document.querySelectorAll('.cert-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const pdfPath = card.getAttribute('data-pdf');
+        modalPdf.src = pdfPath;
+        modal.style.display = 'flex';
+      });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalPdf.src = ''; // Clear the PDF source when closing
+    });
+
+    // Close modal if the backdrop is clicked
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        modalPdf.src = '';
+      }
+    });
+  </script>
+</body>
+</html>
