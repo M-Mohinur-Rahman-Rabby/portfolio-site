@@ -11,12 +11,12 @@
     <h1>Certifications & Activities</h1>
     <nav>
       <ul>
-         
         <li><a href="index.html">Home</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="miscellaneous.html" class="active">Certifications</a></li>
         <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="miscellaneous.html" aria-current="page">Certifications & Activities</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -24,82 +24,13 @@
 
   <main>
     <section>
-      <h2>Academic Certifications</h2>
+      <h2>ChemE Fest Certificate</h2>
       <div class="certifications-grid">
-        <!-- Certification 1 -->
         <div class="cert-card">
-          <img src="assets/thumbnails/crystal_structures.png" alt="Crystal Structures Certificate Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">Crystal Structures and Properties of Metals</div>
-          <button class="view-pdf" data-pdf="assets/certificates/crystal_structures.pdf">View PDF</button>
-        </div>
-
-        <!-- Certification 2 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/comsole.png" alt="COMSOL Multiphysics Short Course Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">COMSOL Multiphysics Short Course</div>
-          <button class="view-pdf" data-pdf="assets/certificates/comsole.pdf">View PDF</button>
-        </div>
-
-        <!-- Certification 3 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/fluid_power.png" alt="Fluid Power Certificate Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">Fundamentals of Fluid Power</div>
-          <button class="view-pdf" data-pdf="assets/certificates/fluid_power.pdf">View PDF</button>
-        </div>
-
-        <!-- Certification 4 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/material_processing.png" alt="Material Processing Certificate Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">Material Processing</div>
-          <button class="view-pdf" data-pdf="assets/certificates/material_processing.pdf">View PDF</button>
+          <img src="assets/thumbnails/chemE_fest_thumbnail.jpg" alt="ChemE Fest Certificate" class="cert-thumbnail" />
+          <button class="view-pdf" data-pdf="assets/projects/chemE_fest_certificate.pdf">View Certificate</button>
         </div>
       </div>
-    </section>
-
-    <section>
-      <h2>Co-Curricular Activities</h2>
-      <div class="certifications-grid">
-        <!-- Activity 1 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/astronomical_search.png" alt="International Astronomical Search Collaboration Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">International Astronomical Search Collaboration</div>
-          <button class="view-pdf" data-pdf="assets/certificates/astronomical_search.pdf">View PDF</button>
-        </div>
-
-        <!-- Activity 2 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/mathematics_day_2022.png" alt="International Day of Mathematics 2022 Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">International Day of Mathematics 2022</div>
-          <button class="view-pdf" data-pdf="assets/certificates/mathematics_day_2022.pdf">View PDF</button>
-        </div>
-
-        <!-- Activity 3 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/climate_quiz_2023.png" alt="Climate Quiz 2023 Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">Climate Quiz 2023</div>
-          <button class="view-pdf" data-pdf="assets/certificates/climate_quiz_2023.pdf">View PDF</button>
-        </div>
-
-        <!-- Activity 4 -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/wall_magazine_notredame.png" alt="Wall Magazine Exhibition Notredame College Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">Wall Magazine Exhibition Notredame College</div>
-          <button class="view-pdf" data-pdf="assets/certificates/wall_magazine_notredame.pdf">View PDF</button>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Volunteering & Outreach</h2>
-      <div class="certifications-grid">
-        <!-- Volunteering Activity -->
-        <div class="cert-card">
-          <img src="assets/thumbnails/volunteering_scout.png" alt="Rover Scout Volunteering Thumbnail" class="cert-thumbnail" />
-          <div class="cert-title">Rover Scout</div>
-          <button class="view-pdf" data-pdf="assets/certificates/volunteering_scout.pdf">View PDF</button>
-        </div>
-      </div>
-      <p>I am an active volunteer in university STEM outreach programs and community science communication.</p>
     </section>
   </main>
 
@@ -107,16 +38,7 @@
     <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
 
-  <!-- Modal for PDF Viewer -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <button class="close-modal">&times;</button>
-      <iframe id="modal-pdf" width="100%" height="600px"></iframe>
-    </div>
-  </div>
-
   <script>
-    // Open the modal with the correct PDF when clicking a "view-pdf" button
     document.querySelectorAll('.view-pdf').forEach(button => {
       button.addEventListener('click', () => {
         const pdfPath = button.getAttribute('data-pdf');
@@ -127,15 +49,13 @@
       });
     });
 
-    // Close the modal when clicking the close button or the backdrop
     document.querySelector('.close-modal').addEventListener('click', () => {
       const modal = document.getElementById('modal');
       const modalPdf = document.getElementById('modal-pdf');
       modal.style.display = 'none';
-      modalPdf.src = ''; // Clear the PDF source
+      modalPdf.src = ''; // Clear the PDF source when closing
     });
 
-    // Close the modal when clicking the backdrop
     document.getElementById('modal').addEventListener('click', (e) => {
       if (e.target === document.getElementById('modal')) {
         const modal = document.getElementById('modal');
