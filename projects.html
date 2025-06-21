@@ -2,34 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | M Mohinur Rahman Rabby</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="site-title">Projects</h1>
-      <nav>
-        <ul>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="miscellaneous.html">Certifications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Projects</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="miscellaneous.html">Certifications & Activities</a></li>
+        <li><a href="professional-experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="projects">
-      <h2>Project Certificates</h2>
+    <section>
+      <h2>Project: ChemE Fest Certificate</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <img src="images/cheme_fest.jpg" alt="ChemE Fest Certificate" class="project-thumbnail" />
-          <a href="papers/ChemE_fest_certificate.pdf" target="_blank">ChemE Fest Certificate</a>
+          <img src="assets/images/chemE_fest_thumbnail.jpg" alt="ChemE Fest Certificate" class="project-thumbnail" />
+          <div class="project-title">ChemE Fest Certificate</div>
+          <button class="view-pdf" data-pdf="assets/projects/chemE_fest_certificate.pdf">View Certificate</button>
         </div>
       </div>
     </section>
@@ -38,5 +37,45 @@
   <footer>
     <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
+
+  <!-- Modal for PDF Viewer -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>Full Certificate PDF</h2>
+      <iframe id="modal-pdf" src="" width="100%" height="600px"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // Open the modal with the correct PDF when clicking a "view-pdf" button
+    document.querySelectorAll('.view-pdf').forEach(button => {
+      button.addEventListener('click', () => {
+        const pdfPath = button.getAttribute('data-pdf');
+        const modal = document.getElementById('modal');
+        const modalPdf = document.getElementById('modal-pdf');
+        modalPdf.src = pdfPath;
+        modal.style.display = 'flex';
+      });
+    });
+
+    // Close the modal when clicking the close button or the backdrop
+    document.querySelector('.close-modal').addEventListener('click', () => {
+      const modal = document.getElementById('modal');
+      const modalPdf = document.getElementById('modal-pdf');
+      modal.style.display = 'none';
+      modalPdf.src = ''; // Clear the PDF source
+    });
+
+    // Close modal if the backdrop is clicked
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modal')) {
+        const modal = document.getElementById('modal');
+        const modalPdf = document.getElementById('modal-pdf');
+        modal.style.display = 'none';
+        modalPdf.src = '';
+      }
+    });
+  </script>
 </body>
 </html>
