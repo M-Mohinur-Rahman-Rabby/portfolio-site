@@ -628,8 +628,8 @@ h2 {
 }
 /* Profile Picture Styling */
 .profile-pic {
-  width: 120px; /* Set the width to 120px */
-  height: 120px; /* Set the height to 120px */
+  width: 200px; /* Set the width to 120px */
+  height: 200px; /* Set the height to 120px */
   border-radius: 50%; /* Circular shape */
   border: 3px solid #4c4a3b; /* Border color to match the theme */
   object-fit: cover; /* Ensure the image doesn't stretch */
