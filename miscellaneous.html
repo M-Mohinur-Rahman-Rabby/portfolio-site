@@ -22,7 +22,7 @@
   </header>
 
   <main>
-    <section>
+    <section class="certifications-section">
       <h2>ChemE Fest Certificate</h2>
       <div class="certifications-grid">
         <div class="cert-card">
@@ -37,30 +37,42 @@
     <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
 
+  <!-- Modal for PDF Viewer -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>Full Certificate PDF</h2>
+      <iframe id="modal-pdf" src="" width="100%" height="600px"></iframe>
+    </div>
+  </div>
+
   <script>
+    // Open the PDF modal when clicking the "View Certificate" button
     document.querySelectorAll('.view-pdf').forEach(button => {
       button.addEventListener('click', () => {
         const pdfPath = button.getAttribute('data-pdf');
         const modal = document.getElementById('modal');
         const modalPdf = document.getElementById('modal-pdf');
-        modalPdf.src = pdfPath;
-        modal.style.display = 'flex';
+        modalPdf.src = pdfPath;  // Set the PDF source
+        modal.style.display = 'flex';  // Show the modal
       });
     });
 
+    // Close the modal when the close button is clicked
     document.querySelector('.close-modal').addEventListener('click', () => {
       const modal = document.getElementById('modal');
       const modalPdf = document.getElementById('modal-pdf');
-      modal.style.display = 'none';
+      modal.style.display = 'none';  // Hide the modal
       modalPdf.src = ''; // Clear the PDF source when closing
     });
 
+    // Close the modal if the user clicks outside the modal content
     document.getElementById('modal').addEventListener('click', (e) => {
       if (e.target === document.getElementById('modal')) {
         const modal = document.getElementById('modal');
         const modalPdf = document.getElementById('modal-pdf');
-        modal.style.display = 'none';
-        modalPdf.src = '';
+        modal.style.display = 'none';  // Hide the modal
+        modalPdf.src = ''; // Clear the PDF source when closing
       }
     });
   </script>
