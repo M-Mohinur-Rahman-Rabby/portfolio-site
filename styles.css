@@ -626,4 +626,13 @@ h2 {
 .close-modal:hover {
   color: #4a3a3a;
 }
+/* Profile Picture Styling */
+.profile-pic {
+  width: 120px; /* Set the width to 120px */
+  height: 120px; /* Set the height to 120px */
+  border-radius: 50%; /* Circular shape */
+  border: 3px solid #4c4a3b; /* Border color to match the theme */
+  object-fit: cover; /* Ensure the image doesn't stretch */
+  margin-bottom: 1rem;
+}
 
