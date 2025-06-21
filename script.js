@@ -44,3 +44,31 @@ document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
     }
   });
 });
+// Handle the opening of the modal and display the PDF
+document.querySelectorAll('.view-pdf').forEach(button => {
+  button.addEventListener('click', () => {
+    const pdfPath = button.getAttribute('data-pdf');
+    const modal = document.getElementById('modal');
+    const modalPdf = document.getElementById('modal-pdf');
+    modalPdf.src = pdfPath;  // Set the source to the clicked certificate
+    modal.style.display = 'flex';  // Show the modal
+  });
+});
+
+// Close modal when the close button is clicked
+document.querySelector('.close-modal').addEventListener('click', () => {
+  const modal = document.getElementById('modal');
+  const modalPdf = document.getElementById('modal-pdf');
+  modal.style.display = 'none';  // Hide the modal
+  modalPdf.src = ''; // Clear the PDF source when closing
+});
+
+// Close the modal when clicking outside the modal content
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal')) {
+    const modal = document.getElementById('modal');
+    const modalPdf = document.getElementById('modal-pdf');
+    modal.style.display = 'none';  // Hide the modal
+    modalPdf.src = ''; // Clear the PDF source when closing
+  }
+});
