@@ -2,82 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Education & Certificates | M Mohinur Rahman Rabby</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="site-title">Education & Certificates</h1>
-      <nav>
-        <ul>
-
-           <li><a href="index.html">Home</a></li>
-          <li><a href="education.html" class="active">Education</a></li>
-          <li><a href="research.html">Home</a></li>
-          <li><a href="projects.html">Home</a></li>
-          <li><a href="miscellaneous.html">Home</a></li>
-          <li><a href="contact.html">Home</a></li>
-          
-        </ul>
-      </nav>
-    </div>
+    <h1>Education & Certificates</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="miscellaneous.html">Certifications</a></li>
+        <li><a href="professional-experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="degree-section">
-      <h2>B.Sc. Chemical & Food Process Engineering</h2>
-      <p><strong>Rajshahi University of Engineering & Technology</strong></p>
-      <p><strong>CGPA: 3.48</strong></p>
+    <section class="timeline">
+      <article class="degree">
+        <h2>B.Sc. Chemical & Food Process Engineering</h2>
+        <p><strong>Rajshahi University of Engineering & Technology</strong></p>
+        <p><strong>CGPA:</strong> 3.48</p>
+        <button class="open-modal-documents">View Documents</button>
+      </article>
 
-      <div class="modal-buttons">
-        <button class="open-modal-documents" data-target-modal="modal-bsc">View Documents</button>
-      </div>
+      <article class="degree">
+        <h2>Higher Secondary Certificate Examination (HSC)</h2>
+        <p><strong>Result:</strong> 4.75</p>
+        <button class="open-modal-documents">View HSC Certificate</button>
+      </article>
 
-      <div id="modal-bsc" class="modal">
-        <div class="modal-content">
-          <button class="close-modal">&times;</button>
-          <h2>Certificates & Documents</h2>
-          <ul class="documents-list">
-            <li><a href="certificates/academic_transcript.pdf" target="_blank">Academic Transcript</a></li>
-            <li><a href="certificates/all_grade_sheets.pdf" target="_blank">All Grade Sheets Combined</a></li>
-            <li><a href="certificates/institutional_declaration.pdf" target="_blank">Institutional Declaration</a></li>
-            <li><a href="certificates/marks_equivalence.pdf" target="_blank">Marks Equivalence</a></li>
-            <li><a href="certificates/medium_of_instruction.pdf" target="_blank">Medium Of Instruction (MOI)</a></li>
-            <li><a href="certificates/migration_certificate.pdf" target="_blank">Migration Certificate</a></li>
-          </ul>
-        </div>
-      </div>
+      <article class="degree">
+        <h2>Secondary School Certificate Examination (SSC)</h2>
+        <p><strong>Result:</strong> 5.00</p>
+        <button class="open-modal-documents">View SSC Certificate</button>
+      </article>
     </section>
 
-    <section class="higher-secondary">
-      <h2>Higher Secondary Certificate Examination</h2>
-      <p><strong>Result: 4.75</strong></p>
-      <button class="open-modal-documents" data-target-modal="modal-hsc">View HSC Certificate</button>
-
-      <div id="modal-hsc" class="modal">
-        <div class="modal-content">
-          <button class="close-modal">&times;</button>
-          <h2>HSC Certificate</h2>
-          <iframe src="certificates/hsc_certificate.pdf" width="100%" height="600px"></iframe>
-        </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h2>Documents & Certificates</h2>
+        <ul class="documents-list">
+          <li><a href="assets/certificates/academic_transcript.pdf" target="_blank">Academic Transcript</a></li>
+          <li><a href="assets/certificates/all_grade_sheets.pdf" target="_blank">All Grade Sheets Combined</a></li>
+          <li><a href="assets/certificates/institutional_declaration.pdf" target="_blank">Institutional Declaration</a></li>
+          <li><a href="assets/certificates/marks_equivalence.pdf" target="_blank">Marks Equivalence</a></li>
+          <li><a href="assets/certificates/medium_of_instruction.pdf" target="_blank">Medium of Instruction</a></li>
+          <li><a href="assets/certificates/migration_certificate.pdf" target="_blank">Migration Certificate</a></li>
+        </ul>
       </div>
-    </section>
-
-    <section class="secondary-school">
-      <h2>Secondary School Certificate Examination</h2>
-      <p><strong>Result: 5.00</strong></p>
-      <button class="open-modal-documents" data-target-modal="modal-ssc">View SSC Certificate</button>
-
-      <div id="modal-ssc" class="modal">
-        <div class="modal-content">
-          <button class="close-modal">&times;</button>
-          <h2>SSC Certificate</h2>
-          <iframe src="certificates/ssc_certificate.pdf" width="100%" height="600px"></iframe>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer>
@@ -85,31 +65,12 @@
   </footer>
 
   <script>
-    const modals = document.querySelectorAll('.modal');
-    const closeModalBtns = document.querySelectorAll('.close-modal');
-
-    // Open and close modal functions
-    document.querySelectorAll('.open-modal-documents').forEach(button => {
-      button.addEventListener('click', () => {
-        const targetModal = document.getElementById(button.getAttribute('data-target-modal'));
-        targetModal.style.display = 'flex';
-      });
+    const modal = document.getElementById('modal');
+    document.querySelector('.open-modal-documents').addEventListener('click', () => {
+      modal.style.display = 'flex';
     });
-
-    closeModalBtns.forEach(closeBtn => {
-      closeBtn.addEventListener('click', () => {
-        modals.forEach(modal => {
-          modal.style.display = 'none';
-        });
-      });
-    });
-
-    modals.forEach(modal => {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
+    document.querySelector('.close-modal').addEventListener('click', () => {
+      modal.style.display = 'none';
     });
   </script>
 </body>
