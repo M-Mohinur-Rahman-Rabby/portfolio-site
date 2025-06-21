@@ -2,54 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Experience | M Mohinur Rahman Rabby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience | M Mohinur Rahman Rabby</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <header>
-    <div class="container">
-      <h1 class="site-title">Professional Experience</h1>
-      <nav>
-        <ul>
-          
-          <li><a href="index.html">Home</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="professional-experience.html" aria-current="page">Experience</a></li>
-          <li><a href="miscellaneous.html">Certifications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Professional Experience</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="miscellaneous.html">Certifications</a></li>
+        <li><a href="professional-experience.html" class="active">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="experience">
-      <div class="container">
-        <h2>Industrial Experience</h2>
-        <ul>
-          <li>
-            <h3>Jamuna Fertilizer Company Limited (JFCL)</h3>
-            <p>Role: Industrial Trainee</p>
-            <p>Worked on wastewater treatment projects and resource recovery strategies.</p>
-          </li>
-          <li>
-            <h3>PRAN_RFL Group</h3>
-            <p>Role: Assistant Manager</p>
-            <p>Gained exposure to various industrial production processes.</p>
-          </li>
-        </ul>
+    <section>
+      <h2>Industrial Experience</h2>
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="exp-title">Jamuna Fertilizer Company Limited (JFCL)</div>
+          <div class="exp-role">Industrial Trainee (March 2023 - April 2023)</div>
+          <p class="exp-details">
+            Conducted site visits to the wastewater treatment plant, gaining insights into industrial effluent management and treatment processes.
+          </p>
+        </article>
+
+        <article class="experience-card">
+          <div class="exp-title">PRAN_RFL GROUP</div>
+          <div class="exp-role">Assistant Manager</div>
+          <p class="exp-details">
+            Gained exposure to various industrial operations and strengthened practical knowledge relevant to chemical engineering.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <img src="assets/images/chemE_fest_thumbnail.jpg" alt="ChemE Fest Certificate" class="cert-thumbnail" />
+          <button class="view-pdf" data-pdf="assets/projects/chemE_fest_certificate.pdf">View Certificate</button>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 M Mohinur Rahman Rabby</p>
-    </div>
+    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
 
+  <script>
+    document.querySelectorAll('.view-pdf').forEach(button => {
+      button.addEventListener('click', () => {
+        const pdfPath = button.getAttribute('data-pdf');
+        const modal = document.getElementById('modal');
+        const modalPdf = document.getElementById('modal-pdf');
+        modalPdf.src = pdfPath;
+        modal.style.display = 'flex';
+      });
+    });
+
+    document.querySelector('.close-modal').addEventListener('click', () => {
+      const modal = document.getElementById('modal');
+      const modalPdf = document.getElementById('modal-pdf');
+      modal.style.display = 'none';
+      modalPdf.src = ''; // Clear the PDF source when closing
+    });
+
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modal')) {
+        const modal = document.getElementById('modal');
+        const modalPdf = document.getElementById('modal-pdf');
+        modal.style.display = 'none';
+        modalPdf.src = '';
+      }
+    });
+  </script>
 </body>
 </html>
