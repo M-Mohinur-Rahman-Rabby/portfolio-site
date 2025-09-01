@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>M Mohinur Rahman Rabby | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style_reset_typography.css" />
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons (optional) -->
+  <script src="https://kit.fontawesome.com/9e7b6e77e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -13,7 +17,7 @@
     </div>
     <h1>Welcome to My Portfolio</h1>
     <nav>
-      <ul>
+      <ul id="navList">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="research.html">Research</a></li>
@@ -26,20 +30,96 @@
 
   <main>
     <section class="hero">
-      <h2>Hi, I am M Mohinur Rahman Rabby</h2>
+      <h2 id="dynamicGreeting">Hi, I am M Mohinur Rahman Rabby</h2>
       <p>Welcome to my personal website where you can explore my journey, projects, and more.</p>
-      <a href="assets/certificates/M_Mohinur_Rahman_Rabby_CV.pdf" class="btn" target="_blank" rel="noopener">Download CV</a>
+      <a href="assets/certificates/M_Mohinur_Rahman_Rabby_CV.pdf" class="btn" target="_blank" rel="noopener">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/m-mohinur-rahman-rabby/" class="social-link" target="_blank" rel="noopener">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" />
+        </a>
+        <a href="https://github.com/M-Mohinur-Rahman-Rabby" class="social-link" target="_blank" rel="noopener">
+          <img src="assets/icons/github.svg" alt="GitHub" title="GitHub" />
+        </a>
+        <a href="mailto:mohinur.rabby@gmail.com" class="social-link" target="_blank" rel="noopener">
+          <img src="assets/icons/email.svg" alt="Email" title="Email" />
+        </a>
+      </div>
     </section>
 
     <section class="about">
       <h3>About Me</h3>
-      <p>Graduated from Rajshahi University of Engineering & Technology (RUET) with a degree in Chemical and Food Process Engineering (May 2024), specializing in textile wastewater treatment and nanomaterial extraction for sustainable innovation. Proficient in advanced characterization techniques including FTIR-ATR, FESEM, XRD, EDX, TGA/DTA/DTG, Zeta Potential, DLS, and UV-vis-NIR Spectroscopy.
-Passionate about clean energy, circular economy, and sustainable process development. I bring a strong problem-solving mindset, creativity, and eagerness to learn. Actively seeking opportunities in nanomaterials, green chemistry, and advanced process technologies through higher studies and collaborative research.</p>
+      <p>
+        Graduated from Rajshahi University of Engineering &amp; Technology (RUET) with a degree in Chemical and Food Process Engineering (May 2024), specializing in textile wastewater treatment and nanomaterial extraction for sustainable innovation.
+        Proficient in advanced characterization techniques including FTIR-ATR, FESEM, XRD, EDX, TGA/DTA/DTG, Zeta Potential, DLS, and UV-vis-NIR Spectroscopy.
+        <br><br>
+        Passionate about clean energy, circular economy, and sustainable process development. I bring a strong problem-solving mindset, creativity, and eagerness to learn. Actively seeking opportunities in nanomaterials, green chemistry, and advanced process technologies through higher studies and collaborative research.
+      </p>
+    </section>
+
+    <section class="projects-grid" id="projectSection">
+      <!-- Dynamic project cards injected by JS -->
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 M Mohinur Rahman Rabby</p>
   </footer>
+
+  <!-- Dynamic JS for greeting, project loading, and navigation highlight -->
+  <script>
+    // Dynamic greeting based on time of day
+    const greeting = document.getElementById('dynamicGreeting');
+    const hours = new Date().getHours();
+    let timeMsg = 'Hi, I am M Mohinur Rahman Rabby';
+    if (hours >= 5 && hours < 12) timeMsg = 'Good morning! I am M Mohinur Rahman Rabby';
+    else if (hours >= 12 && hours < 18) timeMsg = 'Good afternoon! I am M Mohinur Rahman Rabby';
+    else if (hours >= 18 && hours < 22) timeMsg = 'Good evening! I am M Mohinur Rahman Rabby';
+    greeting.textContent = timeMsg;
+
+    // Highlight navigation dynamically
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      if (window.location.pathname.endsWith(link.getAttribute('href'))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Example dynamic project cards (could be loaded from a JSON/api)
+    const projects = [
+      {
+        title: "Nanomaterial Extraction for Textile Wastewater",
+        image: "assets/images/project1.jpg",
+        description: "Innovative process for extracting nanomaterials from textile effluents, promoting circular economy and sustainable practices.",
+        pdf: "assets/projects/Nanomaterial_Extraction.pdf"
+      },
+      {
+        title: "Advanced Characterization Techniques",
+        image: "assets/images/project2.jpg",
+        description: "Application of FTIR-ATR, FESEM, XRD and more for analyzing materials in environmental engineering.",
+        pdf: "assets/projects/Characterization_Techniques.pdf"
+      }
+      // Add more projects as needed
+    ];
+
+    const projectSection = document.getElementById('projectSection');
+    if (projectSection && projects.length) {
+      projects.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+          <img src="${proj.image}" alt="${proj.title}" class="project-thumbnail" />
+          <div class="project-title">${proj.title}</div>
+          <p>${proj.description}</p>
+          <a href="${proj.pdf}" class="view-pdf" target="_blank" rel="noopener">
+            <i class="fas fa-file-pdf"></i> View PDF
+          </a>
+        `;
+        projectSection.appendChild(card);
+      });
+    }
+  </script>
 </body>
 </html>
