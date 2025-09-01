@@ -3,78 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Research Publications of M Mohinur Rahman Rabby - Chemical and Food Process Engineer" />
+  <meta name="keywords" content="Chemical Engineering Research, CNC, Nanomaterials, M Mohinur Rahman Rabby" />
+  <meta name="author" content="M Mohinur Rahman Rabby" />
+  
   <title>Research | M Mohinur Rahman Rabby</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/9e7b6e77e8.js" crossorigin="anonymous"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 </head>
+
 <body>
+  <!-- Header -->
   <header>
-    <h1>Research Papers</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="research.html" class="active">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <!-- Time Display -->
+      <div class="user-info">
+        <span class="current-time" aria-live="polite"></span>
+      </div>
+      
+      <!-- Logo Section -->
+      <div class="logo">
+        <h1>Research Papers</h1>
+        <p class="subtitle">Publications & Scientific Contributions</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a></li>
+          <li><a href="education.html">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Education</span>
+          </a></li>
+          <li><a href="research.html" class="active" aria-current="page">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <span>Research</span>
+          </a></li>
+          <li><a href="miscellaneous.html">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>Certifications</span>
+          </a></li>
+          <li><a href="professional-experience.html">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            <span>Experience</span>
+          </a></li>
+          <li><a href="contact.html">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section>
-      <h2>Peer reviewed Q1 Journal Papers</h2>
-      <div class="publications-grid">
-        <!-- Paper 1 -->
-        <article class="publication-card">
-          <h3>Isolation and characterization of CNC from waste maize cob available in Bangladesh as a potential candidate for the fabrication of multifunctional bio-nanocomposites: A new approach</h3>
-          <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="paper1">Show Paper</button>
-          <div class="abstract" id="paper1" aria-hidden="true">
-            <a href="assets/certificates/Paper-1.pdf" target="_blank" rel="noopener">Read full paper</a>
-          </div>
-        </article>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Research Publications</h1>
+        <p>
+          Peer-reviewed research contributions in nanomaterial extraction, 
+          wastewater treatment, and sustainable chemical processes.
+        </p>
+      </div>
+    </section>
 
-        <!-- Paper 2 -->
-        <article class="publication-card">
-          <h3>Production of CNC from agro-waste biomass (maize shells) as a potential reinforcement in bio-nanocomposites: Extraction, modification, and characterization study </h3>
-          <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="paper2">Show Paper</button>
-          <div class="abstract" id="paper2" aria-hidden="true">
-            <p>Nano-cellulose is a biodegradable polysaccharide which has multifunctional uses due to its fascinating properties (i.e., antibacterial, antifungal, anticarcinogenic activity) in wastewater treatment, drug design, food packaging, etc. CNC usually extracted from primary plant (such as jute, hemp, flax, cotton, etc.) which has other significant uses (for example preparation of yarn, rope, tissue paper, etc.). To reduce the pressure on primary plant the use of waste biomass of secondary plant could be an effective and economic route of CNC isolation. In this study a series of chemical treatment i.e. scouring (5% soap solution), alkali treatment (16% NaOH solution), bleaching (2% NaClO2 and 2% Na2S2O5 solution at pH = 4.0), acid hydrolysis (60% H2SO4) was conducted to isolate CNC from the waste maize cob. Characterization of the specimens were conducted by FTIR-ATR (Fourier Transform Infrared-Attenuated Total Reflection), FESEM (Field Emission Scanning Electron Microscopy), XRD (X-ray Diffraction), EDX (Energy Dispersive X-ray), DLS (Dynamic Light Scattering), Thermal analysis (TGA/DTG/DTA), and Zeta potential analysis. </p>
-            <a href="assets/certificates/Paper-2.pdf" target="_blank" rel="noopener">Read full paper</a>
-          </div>
-        </article>
+    <!-- Research Papers Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Peer Reviewed Q1 Journal Papers</h2>
+        
+        <div class="publications-grid">
+          <!-- Paper 1 -->
+          <article class="card publication-card">
+            <div class="publication-header">
+              <div class="publication-icon">
+                <i class="fas fa-file-alt" aria-hidden="true"></i>
+              </div>
+              <div class="publication-meta">
+                <span class="publication-type">Q1 Journal Paper</span>
+                <span class="publication-year">2024</span>
+              </div>
+            </div>
+            
+            <div class="card-content">
+              <h3 class="publication-title">
+                Isolation and characterization of CNC from waste maize cob available in Bangladesh as a potential candidate for the fabrication of multifunctional bio-nanocomposites: A new approach
+              </h3>
+              
+              <div class="publication-tags">
+                <span class="skill-tag">CNC Extraction</span>
+                <span class="skill-tag">Bio-nanocomposites</span>
+                <span class="skill-tag">Waste Biomass</span>
+                <span class="skill-tag">Characterization</span>
+              </div>
+              
+              <div class="publication-actions">
+                <button class="btn btn-secondary toggle-abstract-btn" 
+                        aria-expanded="false" 
+                        aria-controls="paper1">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                  Show Paper
+                </button>
+              </div>
+              
+              <div class="abstract" id="paper1" aria-hidden="true" style="display: none;">
+                <div class="abstract-content">
+                  <h4>Research Paper</h4>
+                  <p>
+                    This study presents an innovative approach to isolating and characterizing 
+                    cellulose nanocrystals (CNC) from waste maize cob biomass available in Bangladesh 
+                    for potential use in multifunctional bio-nanocomposite fabrication.
+                  </p>
+                  <div class="paper-actions">
+                    <a href="assets/certificates/Paper-1.pdf" 
+                       class="btn btn-primary" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                      <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                      Read Full Paper
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-        <!-- Paper 3 -->
-        <article class="publication-card">
-          <h3>Production of functionalized clay-CNC based biopolymeric nanocomposite from agro-waste biomass for bulky industrial wastewater treatment via continuous column adsorption study with mathematical modeling: A critical review</h3>
-          <button class="toggle-abstract-btn" aria-expanded="false" aria-controls="paper3">Show Paper</button>
-          <div class="abstract" id="paper3" aria-hidden="true">
-            <a href="assets/certificates/Paper-3.pdf" target="_blank" rel="noopener">Read full paper</a>
+          <!-- Paper 2 -->
+          <article class="card publication-card">
+            <div class="publication-header">
+              <div class="publication-icon">
+                <i class="fas fa-file-alt" aria-hidden="true"></i>
+              </div>
+              <div class="publication-meta">
+                <span class="publication-type">Q1 Journal Paper</span>
+                <span class="publication-year">2024</span>
+              </div>
+            </div>
+            
+            <div class="card-content">
+              <h3 class="publication-title">
+                Production of CNC from agro-waste biomass (maize shells) as a potential reinforcement in bio-nanocomposites: Extraction, modification, and characterization study
+              </h3>
+              
+              <div class="publication-tags">
+                <span class="skill-tag">Agro-waste Biomass</span>
+                <span class="skill-tag">CNC Production</span>
+                <span class="skill-tag">FTIR-ATR</span>
+                <span class="skill-tag">FESEM</span>
+                <span class="skill-tag">XRD Analysis</span>
+              </div>
+              
+              <div class="publication-actions">
+                <button class="btn btn-secondary toggle-abstract-btn" 
+                        aria-expanded="false" 
+                        aria-controls="paper2">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                  Show Paper
+                </button>
+              </div>
+              
+              <div class="abstract" id="paper2" aria-hidden="true" style="display: none;">
+                <div class="abstract-content">
+                  <h4>Abstract</h4>
+                  <p>
+                    Nano-cellulose is a biodegradable polysaccharide which has multifunctional uses due to its fascinating properties (i.e., antibacterial, antifungal, anticarcinogenic activity) in wastewater treatment, drug design, food packaging, etc. CNC usually extracted from primary plant (such as jute, hemp, flax, cotton, etc.) which has other significant uses (for example preparation of yarn, rope, tissue paper, etc.). To reduce the pressure on primary plant the use of waste biomass of secondary plant could be an effective and economic route of CNC isolation. In this study a series of chemical treatment i.e. scouring (5% soap solution), alkali treatment (16% NaOH solution), bleaching (2% NaClO2 and 2% Na2S2O5 solution at pH = 4.0), acid hydrolysis (60% H2SO4) was conducted to isolate CNC from the waste maize cob. Characterization of the specimens were conducted by FTIR-ATR (Fourier Transform Infrared-Attenuated Total Reflection), FESEM (Field Emission Scanning Electron Microscopy), XRD (X-ray Diffraction), EDX (Energy Dispersive X-ray), DLS (Dynamic Light Scattering), Thermal analysis (TGA/DTG/DTA), and Zeta potential analysis.
+                  </p>
+                  <div class="paper-actions">
+                    <a href="assets/certificates/Paper-2.pdf" 
+                       class="btn btn-primary" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                      <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                      Read Full Paper
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Paper 3 -->
+          <article class="card publication-card">
+            <div class="publication-header">
+              <div class="publication-icon">
+                <i class="fas fa-file-alt" aria-hidden="true"></i>
+              </div>
+              <div class="publication-meta">
+                <span class="publication-type">Q1 Journal Paper</span>
+                <span class="publication-year">2024</span>
+              </div>
+            </div>
+            
+            <div class="card-content">
+              <h3 class="publication-title">
+                Production of functionalized clay-CNC based biopolymeric nanocomposite from agro-waste biomass for bulky industrial wastewater treatment via continuous column adsorption study with mathematical modeling: A critical review
+              </h3>
+              
+              <div class="publication-tags">
+                <span class="skill-tag">Wastewater Treatment</span>
+                <span class="skill-tag">Clay-CNC Nanocomposite</span>
+                <span class="skill-tag">Mathematical Modeling</span>
+                <span class="skill-tag">Column Adsorption</span>
+              </div>
+              
+              <div class="publication-actions">
+                <button class="btn btn-secondary toggle-abstract-btn" 
+                        aria-expanded="false" 
+                        aria-controls="paper3">
+                  <i class="fas fa-eye" aria-hidden="true"></i>
+                  Show Paper
+                </button>
+              </div>
+              
+              <div class="abstract" id="paper3" aria-hidden="true" style="display: none;">
+                <div class="abstract-content">
+                  <h4>Research Paper</h4>
+                  <p>
+                    This critical review examines the production of functionalized clay-CNC based 
+                    biopolymeric nanocomposites from agro-waste biomass for industrial wastewater 
+                    treatment applications using continuous column adsorption with mathematical modeling.
+                  </p>
+                  <div class="paper-actions">
+                    <a href="assets/certificates/Paper-3.pdf" 
+                       class="btn btn-primary" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                      <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                      Read Full Paper
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Statistics -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Research Impact</h2>
+        
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Q1 Journal Papers</div>
           </div>
-        </article>
+          <div class="stat-card">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Characterization Techniques</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2024</div>
+            <div class="stat-label">Publication Year</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Research Areas</div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="miscellaneous.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 M Mohinur Rahman Rabby. All rights reserved.</p>
+        <p class="footer-meta">
+          <span class="utc-time" aria-live="polite"></span> | 
+          <span>Last updated: 2025-01-15</span>
+        </p>
+      </div>
+    </div>
   </footer>
 
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Page-specific JavaScript -->
   <script>
-    document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const abstract = document.getElementById(button.getAttribute('aria-controls'));
-        const expanded = button.getAttribute('aria-expanded') === 'true';
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current time in UTC format: 2025-09-01 17:49:44
+      const updateTime = () => {
+        const now = new Date();
+        const year = now.getUTCFullYear();
+        const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(now.getUTCDate()).padStart(2, '0');
+        const hours = String(now.getUTCHours()).padStart(2, '0');
+        const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+        
+        const utcTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        
+        const timeElements = document.querySelectorAll('.current-time, .utc-time');
+        timeElements.forEach(el => {
+          el.textContent = utcTime;
+        });
+      };
+      
+      updateTime();
+      setInterval(updateTime, 1000);
 
-        if (expanded) {
-          abstract.style.display = 'none';
-          button.setAttribute('aria-expanded', 'false');
-          button.textContent = 'Show Paper';
-        } else {
-          abstract.style.display = 'block';
-          button.setAttribute('aria-expanded', 'true');
-          button.textContent = 'Hide Paper';
+      // Highlight active navigation
+      const currentPage = window.location.pathname.split('/').pop() || 'research.html';
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+        
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
         }
+      });
+
+      // Enhanced abstract toggle functionality
+      document.querySelectorAll('.toggle-abstract-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const abstractId = this.getAttribute('aria-controls');
+          const abstract = document.getElementById(abstractId);
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          
+          if (isExpanded) {
+            // Collapse abstract
+            abstract.style.height = abstract.scrollHeight + 'px';
+            setTimeout(() => {
+              abstract.style.height = '0px';
+              abstract.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+              abstract.style.display = 'none';
+              abstract.setAttribute('aria-hidden', 'true');
+            }, 300);
+            
+            this.setAttribute('aria-expanded', 'false');
+            this.innerHTML = '<i class="fas fa-eye" aria-hidden="true"></i> Show Paper';
+            
+          } else {
+            // Expand abstract
+            abstract.style.display = 'block';
+            abstract.style.height = '0px';
+            abstract.style.opacity = '0';
+            abstract.setAttribute('aria-hidden', 'false');
+            
+            const targetHeight = abstract.scrollHeight;
+            setTimeout(() => {
+              abstract.style.height = targetHeight + 'px';
+              abstract.style.opacity = '1';
+            }, 10);
+            
+            setTimeout(() => {
+              abstract.style.height = 'auto';
+            }, 300);
+            
+            this.setAttribute('aria-expanded', 'true');
+            this.innerHTML = '<i class="fas fa-eye-slash" aria-hidden="true"></i> Hide Paper';
+          }
+        });
+      });
+
+      // Track paper link clicks for analytics
+      document.querySelectorAll('.paper-actions a').forEach(link => {
+        link.addEventListener('click', function() {
+          const paperTitle = this.closest('.publication-card').querySelector('.publication-title').textContent.trim();
+          console.log(`Paper accessed: ${paperTitle}`);
+        });
       });
     });
   </script>
