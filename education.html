@@ -1,62 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Educational Background of M Mohinur Rahman Rabby - Chemical and Food Process Engineer" />
+  <meta name="keywords" content="Chemical Engineering Education, RUET, M Mohinur Rahman Rabby" />
+  <meta name="author" content="M Mohinur Rahman Rabby" />
+  
   <title>Education | M Mohinur Rahman Rabby</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/9e7b6e77e8.js" crossorigin="anonymous"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 </head>
+
 <body>
+  <!-- Header -->
   <header>
-    <h1>Education</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html" class="active">Education</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <!-- Time Display -->
+      <div class="user-info">
+        <span class="current-time" aria-live="polite"></span>
+      </div>
+      
+      <!-- Logo Section -->
+      <div class="logo">
+        <h1>Education</h1>
+        <p class="subtitle">Academic Background & Achievements</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a></li>
+          <li><a href="education.html" class="active" aria-current="page">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Education</span>
+          </a></li>
+          <li><a href="research.html">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <span>Research</span>
+          </a></li>
+          <li><a href="miscellaneous.html">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>Certifications</span>
+          </a></li>
+          <li><a href="professional-experience.html">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            <span>Experience</span>
+          </a></li>
+          <li><a href="contact.html">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section>
-      <h2>B.Sc. Chemical & Food Process Engineering</h2>
-      <p><strong>Rajshahi University of Engineering & Technology</strong></p>
-      <p><strong>CGPA:</strong> 3.48</p>
-      <button class="open-modal-documents">View Documents</button>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Educational Background</h1>
+        <p>
+          Academic journey in Chemical and Food Process Engineering with focus on 
+          sustainable technologies and environmental applications.
+        </p>
+      </div>
     </section>
 
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <button class="close-modal">&times;</button>
-        <h2>Documents</h2>
+    <!-- Education Section -->
+    <section class="section">
+      <div class="container">
+        <div class="education-card card">
+          <div class="education-header">
+            <div class="university-logo">
+              <i class="fas fa-university" aria-hidden="true"></i>
+            </div>
+            <div class="education-info">
+              <h2 class="degree-title">B.Sc. Chemical & Food Process Engineering</h2>
+              <h3 class="university-name">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Rajshahi University of Engineering & Technology
+              </h3>
+              <div class="education-meta">
+                <div class="cgpa-info">
+                  <i class="fas fa-award" aria-hidden="true"></i>
+                  <strong>CGPA: 3.48</strong>
+                </div>
+                <div class="graduation-year">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  <strong>Graduated: May 2024</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <p class="education-description">
+              Completed comprehensive undergraduate program in Chemical and Food Process Engineering 
+              with specialization in sustainable process development, nanomaterial extraction, 
+              and advanced characterization techniques.
+            </p>
+            
+            <div class="documents-section">
+              <h4>Academic Documents</h4>
+              <button class="btn btn-primary open-modal-documents">
+                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                View Documents
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="miscellaneous.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 M Mohinur Rahman Rabby. All rights reserved.</p>
+        <p class="footer-meta">
+          <span class="utc-time" aria-live="polite"></span> | 
+          <span>Last updated: 2025-01-15</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Documents Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Academic Documents</h2>
+        <button class="close-modal" aria-label="Close modal">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
         <ul class="documents-list">
-          <li><a href="assets/certificates/provisional_certificate.pdf" target="_blank">Provisional Certificate</a></li>
-          <li><a href="assets/certificates/academic_transcript.pdf" target="_blank">Academic Transcript</a></li>
-          <li><a href="assets/certificates/all_grade_sheets.pdf" target="_blank">All Grade Sheets</a></li>
-          <li><a href="assets/certificates/institutional_declaration.pdf" target="_blank">Institutional Declaration</a></li>
-          <li><a href="assets/certificates/marks_equivalence.pdf" target="_blank">Marks Equivalence</a></li>
-          <li><a href="assets/certificates/medium_of_instruction.pdf" target="_blank">Medium Of Instruction</a></li>
-          <li><a href="assets/certificates/migration_certificate.pdf" target="_blank">Migration Certificate</a></li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/provisional_certificate.pdf" target="_blank" rel="noopener noreferrer">
+              Provisional Certificate
+            </a>
+          </li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/academic_transcript.pdf" target="_blank" rel="noopener noreferrer">
+              Academic Transcript
+            </a>
+          </li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/all_grade_sheets.pdf" target="_blank" rel="noopener noreferrer">
+              All Grade Sheets
+            </a>
+          </li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/institutional_declaration.pdf" target="_blank" rel="noopener noreferrer">
+              Institutional Declaration
+            </a>
+          </li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/marks_equivalence.pdf" target="_blank" rel="noopener noreferrer">
+              Marks Equivalence
+            </a>
+          </li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/medium_of_instruction.pdf" target="_blank" rel="noopener noreferrer">
+              Medium Of Instruction
+            </a>
+          </li>
+          <li class="document-item">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            <a href="assets/certificates/migration_certificate.pdf" target="_blank" rel="noopener noreferrer">
+              Migration Certificate
+            </a>
+          </li>
         </ul>
       </div>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
-  </footer>
-
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Page-specific JavaScript -->
   <script>
-    const modal = document.getElementById('modal');
-    document.querySelector('.open-modal-documents').addEventListener('click', () => {
-      modal.style.display = 'flex';
-    });
-    document.querySelector('.close-modal').addEventListener('click', () => {
-      modal.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current time in UTC format: 2025-09-01 17:47:39
+      const updateTime = () => {
+        const now = new Date();
+        const year = now.getUTCFullYear();
+        const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(now.getUTCDate()).padStart(2, '0');
+        const hours = String(now.getUTCHours()).padStart(2, '0');
+        const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+        
+        const utcTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        
+        const timeElements = document.querySelectorAll('.current-time, .utc-time');
+        timeElements.forEach(el => {
+          el.textContent = utcTime;
+        });
+      };
+      
+      updateTime();
+      setInterval(updateTime, 1000);
+
+      // Highlight active navigation
+      const currentPage = window.location.pathname.split('/').pop() || 'education.html';
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+        
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
+      });
+
+      // Modal functionality
+      const modal = document.getElementById('modal');
+      const openModalBtn = document.querySelector('.open-modal-documents');
+      const closeModalBtn = document.querySelector('.close-modal');
+
+      // Open modal
+      openModalBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+        modal.focus();
+      });
+
+      // Close modal
+      const closeModal = () => {
+        modal.style.display = 'none';
+        openModalBtn.focus(); // Return focus to trigger element
+      };
+
+      closeModalBtn.addEventListener('click', closeModal);
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          closeModal();
+        }
+      });
+
+      // Track document link clicks
+      const documentLinks = document.querySelectorAll('.documents-list a');
+      documentLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          console.log(`Document accessed: ${this.textContent.trim()}`);
+        });
+      });
     });
   </script>
 </body>
