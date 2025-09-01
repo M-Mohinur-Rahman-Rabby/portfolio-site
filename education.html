@@ -26,8 +26,9 @@
   <!-- Header -->
   <header>
     <div class="header-content">
-      <!-- Time Display -->
+      <!-- User Info and Time Display -->
       <div class="user-info">
+        <span class="user-login">Welcome, Sharmin8014</span>
         <span class="current-time" aria-live="polite"></span>
       </div>
       
@@ -162,47 +163,82 @@
         <ul class="documents-list">
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/provisional_certificate.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/provisional_certificate.pdf"
+                    data-title="Provisional Certificate">
               Provisional Certificate
-            </a>
+            </button>
           </li>
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/academic_transcript.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/academic_transcript.pdf"
+                    data-title="Academic Transcript">
               Academic Transcript
-            </a>
+            </button>
           </li>
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/all_grade_sheets.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/all_grade_sheets.pdf"
+                    data-title="All Grade Sheets">
               All Grade Sheets
-            </a>
+            </button>
           </li>
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/institutional_declaration.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/institutional_declaration.pdf"
+                    data-title="Institutional Declaration">
               Institutional Declaration
-            </a>
+            </button>
           </li>
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/marks_equivalence.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/marks_equivalence.pdf"
+                    data-title="Marks Equivalence">
               Marks Equivalence
-            </a>
+            </button>
           </li>
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/medium_of_instruction.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/medium_of_instruction.pdf"
+                    data-title="Medium Of Instruction">
               Medium Of Instruction
-            </a>
+            </button>
           </li>
           <li class="document-item">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <a href="assets/certificates/migration_certificate.pdf" target="_blank" rel="noopener noreferrer">
+            <button class="view-pdf" 
+                    data-pdf="assets/certificates/migration_certificate.pdf"
+                    data-title="Migration Certificate">
               Migration Certificate
-            </a>
+            </button>
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Viewer Modal -->
+  <div id="pdf-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="pdf-modal-title">Document Viewer</h2>
+        <button class="close-pdf-modal" aria-label="Close PDF modal">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="modal-pdf" 
+                src="" 
+                title="PDF Document Viewer"
+                width="100%" 
+                height="600px"
+                style="border: none;">
+        </iframe>
       </div>
     </div>
   </div>
@@ -213,7 +249,7 @@
   <!-- Page-specific JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Set current time in UTC format: 2025-09-01 17:47:39
+      // Set current time in UTC format: 2025-09-01 17:52:01
       const updateTime = () => {
         const now = new Date();
         const year = now.getUTCFullYear();
@@ -246,18 +282,18 @@
         }
       });
 
-      // Modal functionality
+      // Documents list modal functionality
       const modal = document.getElementById('modal');
       const openModalBtn = document.querySelector('.open-modal-documents');
       const closeModalBtn = document.querySelector('.close-modal');
 
-      // Open modal
+      // Open documents list modal
       openModalBtn.addEventListener('click', function() {
         modal.style.display = 'flex';
         modal.focus();
       });
 
-      // Close modal
+      // Close documents list modal
       const closeModal = () => {
         modal.style.display = 'none';
         openModalBtn.focus(); // Return focus to trigger element
@@ -272,18 +308,65 @@
         }
       });
 
-      // Close modal with Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-          closeModal();
+      // PDF viewer modal functionality
+      const pdfModal = document.getElementById('pdf-modal');
+      const modalPdf = document.getElementById('modal-pdf');
+      const pdfModalTitle = document.getElementById('pdf-modal-title');
+      const closePdfModalBtn = document.querySelector('.close-pdf-modal');
+
+      // View PDF buttons functionality
+      document.querySelectorAll('.view-pdf').forEach(button => {
+        button.addEventListener('click', function() {
+          const pdfPath = this.getAttribute('data-pdf');
+          const pdfTitle = this.getAttribute('data-title');
+          
+          // Set PDF modal content
+          pdfModalTitle.textContent = pdfTitle || 'Document Viewer';
+          modalPdf.src = pdfPath;
+          
+          // Hide documents list modal
+          modal.style.display = 'none';
+          
+          // Show PDF modal
+          pdfModal.style.display = 'flex';
+          pdfModal.focus();
+        });
+      });
+
+      // Close PDF modal
+      const closePdfModal = () => {
+        pdfModal.style.display = 'none';
+        modalPdf.src = '';
+        // Return to documents list modal
+        modal.style.display = 'flex';
+        modal.focus();
+      };
+
+      closePdfModalBtn.addEventListener('click', closePdfModal);
+
+      // Close PDF modal when clicking outside
+      pdfModal.addEventListener('click', function(e) {
+        if (e.target === pdfModal) {
+          closePdfModal();
         }
       });
 
-      // Track document link clicks
-      const documentLinks = document.querySelectorAll('.documents-list a');
-      documentLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          console.log(`Document accessed: ${this.textContent.trim()}`);
+      // Close modals with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          if (pdfModal.style.display === 'flex') {
+            closePdfModal();
+          } else if (modal.style.display === 'flex') {
+            closeModal();
+          }
+        }
+      });
+
+      // Track document access
+      document.querySelectorAll('.view-pdf').forEach(button => {
+        button.addEventListener('click', function() {
+          const docName = this.textContent.trim();
+          console.log(`Document accessed: ${docName}`);
         });
       });
     });
