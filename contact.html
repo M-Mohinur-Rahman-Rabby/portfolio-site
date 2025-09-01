@@ -3,59 +3,334 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact M Mohinur Rahman Rabby - Chemical and Food Process Engineer" />
+  <meta name="keywords" content="Contact, M Mohinur Rahman Rabby, Chemical Engineer" />
+  <meta name="author" content="M Mohinur Rahman Rabby" />
+  
   <title>Contact | M Mohinur Rahman Rabby</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/9e7b6e77e8.js" crossorigin="anonymous"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 </head>
+
 <body>
+  <!-- Header -->
   <header>
-    <h1>Contact Me</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <!-- User Info and Time Display -->
+      <div class="user-info">
+        <span class="user-login">Welcome, Sharmin8014</span>
+        <span class="current-time" aria-live="polite"></span>
+      </div>
+      
+      <!-- Logo Section -->
+      <div class="logo">
+        <h1>Contact Me</h1>
+        <p class="subtitle">Let's Connect & Collaborate</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a></li>
+          <li><a href="education.html">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Education</span>
+          </a></li>
+          <li><a href="research.html">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <span>Research</span>
+          </a></li>
+          <li><a href="miscellaneous.html">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>Certifications</span>
+          </a></li>
+          <li><a href="professional-experience.html">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            <span>Experience</span>
+          </a></li>
+          <li><a href="contact.html" class="active" aria-current="page">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section class="contact-form">
-      <h2>Get in Touch</h2>
-      <form action="https://formspree.io/f/xgvypkjd" method="POST" aria-label="Contact form">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
-        
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-        
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Contact Me</h1>
+        <p>
+          Ready to discuss research opportunities, collaborations, or professional connections? 
+          I'd love to hear from you and explore how we can work together.
+        </p>
+      </div>
     </section>
 
-    <section class="social-links">
-      <h3>Connect with me</h3>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/mohinurrahman" target="_blank" rel="noopener" class="social-link">
-          <img src="assets/images/linkedin-icon.png" alt="LinkedIn" class="social-icon" />
-        </a>
-        <a href="https://github.com/mohinurrahman" target="_blank" rel="noopener" class="social-link">
-          <img src="assets/images/github-icon.png" alt="GitHub" class="social-icon" />
-        </a>
-        <a href="https://www.researchgate.net/profile/M-Mohinur-Rabby" target="_blank" rel="noopener" class="social-link">
-          <img src="assets/images/researchgate-icon.png" alt="ResearchGate" class="social-icon" />
-        </a>
+    <!-- Contact Form Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <!-- Contact Form -->
+          <div class="card contact-form-card">
+            <h2 class="card-title">Get in Touch</h2>
+            <form action="https://formspree.io/f/xgvypkjd" method="POST" aria-label="Contact form" class="contact-form">
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  Name
+                </label>
+                <input id="name" name="name" type="text" required placeholder="Your full name" />
+              </div>
+              
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  Email
+                </label>
+                <input id="email" name="email" type="email" required placeholder="your.email@example.com" />
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag" aria-hidden="true"></i>
+                  Subject
+                </label>
+                <input id="subject" name="subject" type="text" placeholder="Brief subject line" />
+              </div>
+              
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment" aria-hidden="true"></i>
+                  Message
+                </label>
+                <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="card">
+              <h3 class="card-title">Contact Information</h3>
+              <div class="card-content">
+                <div class="contact-item">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <div>
+                    <strong>Email</strong>
+                    <p>mohinur.rabby@gmail.com</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <div>
+                    <strong>Location</strong>
+                    <p>Rajshahi, Bangladesh</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <strong>Institution</strong>
+                    <p>Rajshahi University of Engineering & Technology (RUET)</p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <i class="fas fa-id-card" aria-hidden="true"></i>
+                  <div>
+                    <strong>ORCID ID</strong>
+                    <p>0009-0008-2581-356X</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Response Time</h3>
+              <div class="card-content">
+                <p>
+                  I typically respond to messages within 24-48 hours. 
+                  For urgent matters, please mention it in your subject line.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Connect with Me</h2>
+        
+        <div class="social-links-grid">
+          <a href="https://www.linkedin.com/in/m-mohinur-rahman-rabby/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="social-card">
+            <div class="social-icon">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Professional networking and career updates</p>
+          </a>
+
+          <a href="https://github.com/M-Mohinur-Rahman-Rabby" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="social-card">
+            <div class="social-icon">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </div>
+            <h3>GitHub</h3>
+            <p>Code repositories and technical projects</p>
+          </a>
+
+          <a href="https://orcid.org/0009-0008-2581-356X" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="social-card">
+            <div class="social-icon">
+              <i class="fab fa-orcid" aria-hidden="true"></i>
+            </div>
+            <h3>ORCID</h3>
+            <p>Research publications and academic profile</p>
+          </a>
+
+          <a href="mailto:mohinur.rabby@gmail.com" 
+             class="social-card">
+            <div class="social-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <h3>Email</h3>
+            <p>Direct communication for collaborations</p>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="research.html">Research</a>
+        <a href="professional-experience.html">Experience</a>
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 M Mohinur Rahman Rabby. All rights reserved.</p>
+        <p class="footer-meta">
+          <span class="utc-time" aria-live="polite"></span> | 
+          <span>Last updated: 2025-01-15</span>
+        </p>
+      </div>
+    </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Page-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current time in UTC format: 2025-09-01 17:33:10
+      const updateTime = () => {
+        const now = new Date();
+        const year = now.getUTCFullYear();
+        const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(now.getUTCDate()).padStart(2, '0');
+        const hours = String(now.getUTCHours()).padStart(2, '0');
+        const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+        
+        const utcTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        
+        const timeElements = document.querySelectorAll('.current-time, .utc-time');
+        timeElements.forEach(el => {
+          el.textContent = utcTime;
+        });
+      };
+      
+      updateTime();
+      setInterval(updateTime, 1000);
+
+      // Highlight active navigation
+      const currentPage = window.location.pathname.split('/').pop() || 'contact.html';
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+        
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
+      });
+
+      // Form submission handling
+      const contactForm = document.querySelector('.contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+          
+          // Show loading state
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          submitButton.disabled = true;
+          
+          // Reset button after form submission (Formspree handles the actual submission)
+          setTimeout(() => {
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          }, 2000);
+        });
+      }
+
+      // Add form validation feedback
+      const formInputs = document.querySelectorAll('input, textarea');
+      formInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+          if (this.hasAttribute('required') && !this.value.trim()) {
+            this.style.borderColor = '#ff6b6b';
+          } else {
+            this.style.borderColor = '';
+          }
+        });
+
+        input.addEventListener('input', function() {
+          if (this.style.borderColor === 'rgb(255, 107, 107)') {
+            this.style.borderColor = '';
+          }
+        });
+      });
+    });
+  </script>
 </body>
-</html> 
+</html>
