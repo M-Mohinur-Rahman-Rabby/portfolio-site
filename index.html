@@ -3,123 +3,498 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>M Mohinur Rahman Rabby | Portfolio</title>
-  <link rel="stylesheet" href="style_reset_typography.css" />
+  <meta name="description" content="M Mohinur Rahman Rabby - Chemical and Food Process Engineer specializing in nanomaterial extraction and sustainable innovation" />
+  <meta name="keywords" content="Chemical Engineering, Nanomaterials, Textile Wastewater, Sustainable Innovation, RUET" />
+  <meta name="author" content="M Mohinur Rahman Rabby" />
+  
+  <title>M Mohinur Rahman Rabby | Portfolio - Chemical Engineer & Researcher</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+  
   <!-- Google Fonts for modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/9e7b6e77e8.js" crossorigin="anonymous"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sharmin8014.github.io/" />
+  <meta property="og:title" content="M Mohinur Rahman Rabby | Portfolio" />
+  <meta property="og:description" content="Chemical and Food Process Engineer specializing in nanomaterial extraction and sustainable innovation" />
+  <meta property="og:image" content="assets/images/profile_picture.jpg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://sharmin8014.github.io/" />
+  <meta property="twitter:title" content="M Mohinur Rahman Rabby | Portfolio" />
+  <meta property="twitter:description" content="Chemical and Food Process Engineer specializing in nanomaterial extraction and sustainable innovation" />
+  <meta property="twitter:image" content="assets/images/profile_picture.jpg" />
 </head>
+
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+
   <header>
-    <div class="logo">
-      <img src="assets/images/profile_picture.jpg" alt="M Mohinur Rahman Rabby" class="profile-pic" />
+    <div class="header-content">
+      <!-- User Info Display -->
+      <div class="user-info">
+        <span class="user-login">Welcome, Sharmin8014</span>
+        <span class="current-time" aria-live="polite"></span>
+      </div>
+      
+      <!-- Logo Section -->
+      <div class="logo">
+        <img src="assets/images/profile_picture.jpg" alt="M Mohinur Rahman Rabby - Profile Picture" class="profile-pic" />
+        <h1 class="logo-text">M Mohinur Rahman Rabby</h1>
+        <p class="logo-subtitle">Chemical & Food Process Engineer</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav role="navigation" aria-label="Main navigation">
+        <ul id="navList">
+          <li><a href="index.html" class="active" aria-current="page">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a></li>
+          <li><a href="education.html">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Education</span>
+          </a></li>
+          <li><a href="research.html">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <span>Research</span>
+          </a></li>
+          <li><a href="miscellaneous.html">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>Certifications</span>
+          </a></li>
+          <li><a href="professional-experience.html">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            <span>Experience</span>
+          </a></li>
+          <li><a href="contact.html">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+      </button>
     </div>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <ul id="navList">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="miscellaneous.html">Certifications</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
+  <main id="main-content">
+    <!-- Hero Section -->
     <section class="hero">
-      <h2 id="dynamicGreeting">Hi, I am M Mohinur Rahman Rabby</h2>
-      <p>Welcome to my personal website where you can explore my journey, projects, and more.</p>
-      <a href="assets/certificates/M_Mohinur_Rahman_Rabby_CV.pdf" class="btn" target="_blank" rel="noopener">
-        <i class="fas fa-download"></i> Download CV
-      </a>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/m-mohinur-rahman-rabby/" class="social-link" target="_blank" rel="noopener">
-          <img src="assets/icons/linkedin.svg" alt="LinkedIn" title="LinkedIn" />
-        </a>
-        <a href="https://github.com/M-Mohinur-Rahman-Rabby" class="social-link" target="_blank" rel="noopener">
-          <img src="assets/icons/github.svg" alt="GitHub" title="GitHub" />
-        </a>
-        <a href="mailto:mohinur.rabby@gmail.com" class="social-link" target="_blank" rel="noopener">
-          <img src="assets/icons/email.svg" alt="Email" title="Email" />
-        </a>
+      <div class="hero-content">
+        <img src="assets/images/profile_picture.jpg" alt="M Mohinur Rahman Rabby" class="profile-pic" />
+        
+        <div class="subtitle">Chemical & Food Process Engineer</div>
+        <h1 id="dynamicGreeting">Hi, I am M Mohinur Rahman Rabby</h1>
+        
+        <p>
+          Passionate about sustainable innovation and nanomaterial extraction. 
+          Specializing in textile wastewater treatment and advanced characterization techniques.
+          Welcome to my journey of research, innovation, and engineering excellence.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a href="assets/certificates/M_Mohinur_Rahman_Rabby_CV.pdf" 
+             class="btn btn-primary" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="Download CV (PDF)">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            Download CV
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            Learn More
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/m-mohinur-rahman-rabby/" 
+             class="social-link" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="Visit LinkedIn profile">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/M-Mohinur-Rahman-Rabby" 
+             class="social-link" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="Visit GitHub profile">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:mohinur.rabby@gmail.com" 
+             class="social-link"
+             aria-label="Send email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a href="https://orcid.org/0009-0008-2581-356X" 
+             class="social-link" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="Visit ORCID profile">
+            <i class="fab fa-orcid" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="about">
-      <h3>About Me</h3>
-      <p>
-        Graduated from Rajshahi University of Engineering &amp; Technology (RUET) with a degree in Chemical and Food Process Engineering (May 2024), specializing in textile wastewater treatment and nanomaterial extraction for sustainable innovation.
-        Proficient in advanced characterization techniques including FTIR-ATR, FESEM, XRD, EDX, TGA/DTA/DTG, Zeta Potential, DLS, and UV-vis-NIR Spectroscopy.
-        <br><br>
-        Passionate about clean energy, circular economy, and sustainable process development. I bring a strong problem-solving mindset, creativity, and eagerness to learn. Actively seeking opportunities in nanomaterials, green chemistry, and advanced process technologies through higher studies and collaborative research.
-      </p>
+    <!-- About Section -->
+    <section id="about" class="section animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              Education & Background
+            </h3>
+            <div class="card-content">
+              <p>
+                Graduated from <strong>Rajshahi University of Engineering & Technology (RUET)</strong> 
+                with a degree in Chemical and Food Process Engineering (May 2024). 
+                Specializing in textile wastewater treatment and nanomaterial extraction 
+                for sustainable innovation.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <i class="fas fa-microscope" aria-hidden="true"></i>
+              Technical Expertise
+            </h3>
+            <div class="card-content">
+              <p>
+                Proficient in advanced characterization techniques including 
+                <strong>FTIR-ATR, FESEM, XRD, EDX, TGA/DTA/DTG, Zeta Potential, 
+                DLS, and UV-vis-NIR Spectroscopy</strong>. Expert in material 
+                analysis and environmental engineering applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <i class="fas fa-leaf" aria-hidden="true"></i>
+              Research Focus
+            </h3>
+            <div class="card-content">
+              <p>
+                Passionate about <strong>clean energy, circular economy, and 
+                sustainable process development</strong>. Focus on nanomaterials, 
+                green chemistry, and advanced process technologies for 
+                environmental solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">
+              <i class="fas fa-target" aria-hidden="true"></i>
+              Career Goals
+            </h3>
+            <div class="card-content">
+              <p>
+                Actively seeking opportunities in nanomaterials research, 
+                green chemistry applications, and advanced process technologies 
+                through higher studies and collaborative research projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="projects-grid" id="projectSection">
-      <!-- Dynamic project cards injected by JS -->
+    <!-- Quick Stats Section -->
+    <section class="section animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Quick Stats</h2>
+        
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <div class="stat-number">2024</div>
+            <div class="stat-label">Graduation Year</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Characterization Techniques</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Research Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid grid-2" id="projectSection">
+          <!-- Dynamic project cards will be injected here -->
+        </div>
+        
+        <div class="text-center mt-4">
+          <a href="research.html" class="btn btn-secondary">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            View All Research
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technologies -->
+    <section class="section animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-vial" aria-hidden="true"></i>
+              Laboratory Techniques
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">FTIR-ATR</span>
+              <span class="skill-tag">FESEM</span>
+              <span class="skill-tag">XRD</span>
+              <span class="skill-tag">EDX</span>
+              <span class="skill-tag">TGA/DTA/DTG</span>
+              <span class="skill-tag">Zeta Potential</span>
+              <span class="skill-tag">DLS</span>
+              <span class="skill-tag">UV-vis-NIR</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-atom" aria-hidden="true"></i>
+              Research Areas
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Nanomaterials</span>
+              <span class="skill-tag">Green Chemistry</span>
+              <span class="skill-tag">Wastewater Treatment</span>
+              <span class="skill-tag">Circular Economy</span>
+              <span class="skill-tag">Sustainable Processes</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <i class="fas fa-code" aria-hidden="true"></i>
+              Technical Skills
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Process Design</span>
+              <span class="skill-tag">Data Analysis</span>
+              <span class="skill-tag">Material Characterization</span>
+              <span class="skill-tag">Environmental Engineering</span>
+              <span class="skill-tag">Chemical Process Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 M Mohinur Rahman Rabby. All rights reserved.</p>
+        <p class="footer-meta">
+          <span class="utc-time" aria-live="polite"></span> | 
+          <span>Last updated: 2025-01-15</span>
+        </p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Dynamic JS for greeting, project loading, and navigation highlight -->
+  <!-- PDF Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Document Viewer</h2>
+        <button class="close-modal" aria-label="Close modal">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="modal-pdf" 
+                src="" 
+                title="PDF Document Viewer"
+                width="100%" 
+                height="600px"
+                style="border: none;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Inline JavaScript for immediate functionality -->
   <script>
-    // Dynamic greeting based on time of day
-    const greeting = document.getElementById('dynamicGreeting');
-    const hours = new Date().getHours();
-    let timeMsg = 'Hi, I am M Mohinur Rahman Rabby';
-    if (hours >= 5 && hours < 12) timeMsg = 'Good morning! I am M Mohinur Rahman Rabby';
-    else if (hours >= 12 && hours < 18) timeMsg = 'Good afternoon! I am M Mohinur Rahman Rabby';
-    else if (hours >= 18 && hours < 22) timeMsg = 'Good evening! I am M Mohinur Rahman Rabby';
-    greeting.textContent = timeMsg;
+    // Immediate DOM ready functions
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current time in UTC format
+      const updateTime = () => {
+        const now = new Date();
+        const utcTime = now.toISOString().slice(0, 19).replace('T', ' ');
+        
+        const timeElements = document.querySelectorAll('.current-time, .utc-time');
+        timeElements.forEach(el => {
+          el.textContent = `UTC: ${utcTime}`;
+        });
+      };
+      
+      updateTime();
+      setInterval(updateTime, 1000);
 
-    // Highlight navigation dynamically
-    document.querySelectorAll('nav ul li a').forEach(link => {
-      if (window.location.pathname.endsWith(link.getAttribute('href'))) {
-        link.classList.add('active');
+      // Dynamic greeting based on UTC time
+      const greeting = document.getElementById('dynamicGreeting');
+      const hours = new Date().getUTCHours();
+      let timeMsg = 'Hi, I am M Mohinur Rahman Rabby';
+      
+      if (hours >= 5 && hours < 12) {
+        timeMsg = 'Good morning! I am M Mohinur Rahman Rabby';
+      } else if (hours >= 12 && hours < 17) {
+        timeMsg = 'Good afternoon! I am M Mohinur Rahman Rabby';
+      } else if (hours >= 17 && hours < 22) {
+        timeMsg = 'Good evening! I am M Mohinur Rahman Rabby';
       } else {
+        timeMsg = 'Good night! I am M Mohinur Rahman Rabby';
+      }
+      
+      greeting.textContent = timeMsg;
+
+      // Highlight active navigation
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('nav ul li a').forEach(link => {
         link.classList.remove('active');
-      }
-    });
-
-    // Example dynamic project cards (could be loaded from a JSON/api)
-    const projects = [
-      {
-        title: "Nanomaterial Extraction for Textile Wastewater",
-        image: "assets/images/project1.jpg",
-        description: "Innovative process for extracting nanomaterials from textile effluents, promoting circular economy and sustainable practices.",
-        pdf: "assets/projects/Nanomaterial_Extraction.pdf"
-      },
-      {
-        title: "Advanced Characterization Techniques",
-        image: "assets/images/project2.jpg",
-        description: "Application of FTIR-ATR, FESEM, XRD and more for analyzing materials in environmental engineering.",
-        pdf: "assets/projects/Characterization_Techniques.pdf"
-      }
-      // Add more projects as needed
-    ];
-
-    const projectSection = document.getElementById('projectSection');
-    if (projectSection && projects.length) {
-      projects.forEach(proj => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
-        card.innerHTML = `
-          <img src="${proj.image}" alt="${proj.title}" class="project-thumbnail" />
-          <div class="project-title">${proj.title}</div>
-          <p>${proj.description}</p>
-          <a href="${proj.pdf}" class="view-pdf" target="_blank" rel="noopener">
-            <i class="fas fa-file-pdf"></i> View PDF
-          </a>
-        `;
-        projectSection.appendChild(card);
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
       });
-    }
+
+      // Load featured projects
+      const projects = [
+        {
+          title: "Nanomaterial Extraction for Textile Wastewater",
+          image: "assets/images/project1.jpg",
+          description: "Innovative process for extracting nanomaterials from textile effluents, promoting circular economy and sustainable practices in the chemical industry.",
+          pdf: "assets/projects/Nanomaterial_Extraction.pdf",
+          tags: ["Nanomaterials", "Sustainability", "Wastewater Treatment"]
+        },
+        {
+          title: "Advanced Characterization Techniques",
+          image: "assets/images/project2.jpg",
+          description: "Application of FTIR-ATR, FESEM, XRD and advanced spectroscopy for comprehensive materials analysis in environmental engineering applications.",
+          pdf: "assets/projects/Characterization_Techniques.pdf",
+          tags: ["FTIR-ATR", "FESEM", "Material Analysis"]
+        },
+        {
+          title: "Sustainable Process Development",
+          image: "assets/images/project3.jpg",
+          description: "Development of green chemistry processes for sustainable manufacturing and environmental remediation using novel catalytic approaches.",
+          pdf: "assets/projects/Sustainable_Processes.pdf",
+          tags: ["Green Chemistry", "Process Design", "Catalysis"]
+        },
+        {
+          title: "Circular Economy Implementation",
+          image: "assets/images/project4.jpg",
+          description: "Research on implementing circular economy principles in chemical process industries for waste reduction and resource optimization.",
+          pdf: "assets/projects/Circular_Economy.pdf",
+          tags: ["Circular Economy", "Waste Reduction", "Optimization"]
+        }
+      ];
+
+      const projectSection = document.getElementById('projectSection');
+      if (projectSection && projects.length) {
+        projects.forEach((proj, index) => {
+          const card = document.createElement('div');
+          card.className = 'card project-card animate-on-scroll';
+          card.style.animationDelay = `${index * 0.1}s`;
+          
+          card.innerHTML = `
+            <div class="project-image">
+              <img src="${proj.image}" alt="${proj.title}" class="project-thumbnail" loading="lazy" />
+              <div class="project-overlay">
+                <button class="view-pdf" 
+                        data-pdf="${proj.pdf}" 
+                        data-title="${proj.title}"
+                        aria-label="View ${proj.title} PDF">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                  View PDF
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">${proj.title}</h3>
+              <p class="project-description">${proj.description}</p>
+              <div class="project-tags">
+                ${proj.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
+              </div>
+            </div>
+          `;
+          projectSection.appendChild(card);
+        });
+      }
+
+      // Add animation classes to elements
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
   </script>
 </body>
 </html>
