@@ -26,7 +26,7 @@
   <!-- Header -->
   <header>
     <div class="header-content">
-      <!-- User Info and Time Display -->
+      <!-- Time Display Only -->
       <div class="user-info">
         <span class="current-time" aria-live="polite"></span>
       </div>
@@ -149,95 +149,162 @@
     </div>
   </footer>
 
-  <!-- Documents Modal -->
+  <!-- Professional Documents Modal -->
   <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
-    <div class="modal-content">
+    <div class="modal-overlay"></div>
+    <div class="modal-content documents-modal">
       <div class="modal-header">
-        <h2 id="modal-title">Academic Documents</h2>
-        <button class="close-modal" aria-label="Close modal">
+        <div class="modal-title-section">
+          <i class="fas fa-graduation-cap modal-icon" aria-hidden="true"></i>
+          <h2 id="modal-title">Academic Documents</h2>
+        </div>
+        <button class="close-modal" aria-label="Close documents modal">
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>
       </div>
       <div class="modal-body">
-        <ul class="documents-list">
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/provisional_certificate.pdf"
-                    data-title="Provisional Certificate">
-              Provisional Certificate
-            </button>
-          </li>
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/academic_transcript.pdf"
-                    data-title="Academic Transcript">
-              Academic Transcript
-            </button>
-          </li>
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/all_grade_sheets.pdf"
-                    data-title="All Grade Sheets">
-              All Grade Sheets
-            </button>
-          </li>
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/institutional_declaration.pdf"
-                    data-title="Institutional Declaration">
-              Institutional Declaration
-            </button>
-          </li>
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/marks_equivalence.pdf"
-                    data-title="Marks Equivalence">
-              Marks Equivalence
-            </button>
-          </li>
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/medium_of_instruction.pdf"
-                    data-title="Medium Of Instruction">
-              Medium Of Instruction
-            </button>
-          </li>
-          <li class="document-item">
-            <i class="fas fa-file-pdf" aria-hidden="true"></i>
-            <button class="view-pdf" 
-                    data-pdf="assets/certificates/migration_certificate.pdf"
-                    data-title="Migration Certificate">
-              Migration Certificate
-            </button>
-          </li>
-        </ul>
+        <p class="modal-description">
+          Access official academic documents from Rajshahi University of Engineering & Technology.
+        </p>
+        <div class="documents-grid">
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/provisional_certificate.pdf"
+                  data-title="Provisional Certificate">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>Provisional Certificate</h3>
+              <p>Official graduation certificate</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/academic_transcript.pdf"
+                  data-title="Academic Transcript">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>Academic Transcript</h3>
+              <p>Complete academic record</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/all_grade_sheets.pdf"
+                  data-title="All Grade Sheets">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>All Grade Sheets</h3>
+              <p>Detailed semester grades</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/institutional_declaration.pdf"
+                  data-title="Institutional Declaration">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>Institutional Declaration</h3>
+              <p>University verification</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/marks_equivalence.pdf"
+                  data-title="Marks Equivalence">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>Marks Equivalence</h3>
+              <p>Grade conversion reference</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/medium_of_instruction.pdf"
+                  data-title="Medium Of Instruction">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>Medium Of Instruction</h3>
+              <p>Language certification</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+
+          <button class="document-card view-pdf" 
+                  data-pdf="assets/certificates/migration_certificate.pdf"
+                  data-title="Migration Certificate">
+            <div class="doc-icon">
+              <i class="fas fa-file-pdf" aria-hidden="true"></i>
+            </div>
+            <div class="doc-info">
+              <h3>Migration Certificate</h3>
+              <p>Transfer documentation</p>
+            </div>
+            <div class="doc-action">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- PDF Viewer Modal -->
   <div id="pdf-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title" style="display: none;">
-    <div class="modal-content">
+    <div class="modal-overlay"></div>
+    <div class="modal-content pdf-modal">
       <div class="modal-header">
-        <h2 id="pdf-modal-title">Document Viewer</h2>
-        <button class="close-pdf-modal" aria-label="Close PDF modal">
-          <i class="fas fa-times" aria-hidden="true"></i>
-        </button>
+        <div class="modal-title-section">
+          <i class="fas fa-file-pdf modal-icon" aria-hidden="true"></i>
+          <h2 id="pdf-modal-title">Document Viewer</h2>
+        </div>
+        <div class="modal-actions">
+          <button class="btn-back-to-docs" aria-label="Back to documents">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            Back to Documents
+          </button>
+          <button class="close-pdf-modal" aria-label="Close PDF viewer">
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
       <div class="modal-body">
-        <iframe id="modal-pdf" 
-                src="" 
-                title="PDF Document Viewer"
-                width="100%" 
-                height="600px"
-                style="border: none;">
-        </iframe>
+        <div class="pdf-container">
+          <iframe id="modal-pdf" 
+                  src="" 
+                  title="PDF Document Viewer"
+                  width="100%" 
+                  height="700px"
+                  style="border: none; border-radius: 8px;">
+          </iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -248,7 +315,7 @@
   <!-- Page-specific JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Set current time in UTC format: 2025-09-01 17:52:01
+      // Set current time in UTC format: 2025-09-01 17:58:08
       const updateTime = () => {
         const now = new Date();
         const year = now.getUTCFullYear();
@@ -281,94 +348,372 @@
         }
       });
 
-      // Documents list modal functionality
+      // Modal elements
       const modal = document.getElementById('modal');
-      const openModalBtn = document.querySelector('.open-modal-documents');
-      const closeModalBtn = document.querySelector('.close-modal');
-
-      // Open documents list modal
-      openModalBtn.addEventListener('click', function() {
-        modal.style.display = 'flex';
-        modal.focus();
-      });
-
-      // Close documents list modal
-      const closeModal = () => {
-        modal.style.display = 'none';
-        openModalBtn.focus(); // Return focus to trigger element
-      };
-
-      closeModalBtn.addEventListener('click', closeModal);
-
-      // Close modal when clicking outside
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-
-      // PDF viewer modal functionality
       const pdfModal = document.getElementById('pdf-modal');
       const modalPdf = document.getElementById('modal-pdf');
       const pdfModalTitle = document.getElementById('pdf-modal-title');
+      
+      const openModalBtn = document.querySelector('.open-modal-documents');
+      const closeModalBtn = document.querySelector('.close-modal');
       const closePdfModalBtn = document.querySelector('.close-pdf-modal');
+      const backToDocsBtn = document.querySelector('.btn-back-to-docs');
 
-      // View PDF buttons functionality
+      // Professional modal animations
+      const showModal = (modalElement) => {
+        modalElement.style.display = 'flex';
+        modalElement.style.opacity = '0';
+        
+        requestAnimationFrame(() => {
+          modalElement.style.opacity = '1';
+          const content = modalElement.querySelector('.modal-content');
+          content.style.transform = 'translate(-50%, -50%) scale(0.9)';
+          
+          requestAnimationFrame(() => {
+            content.style.transform = 'translate(-50%, -50%) scale(1)';
+          });
+        });
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+      };
+
+      const hideModal = (modalElement) => {
+        const content = modalElement.querySelector('.modal-content');
+        content.style.transform = 'translate(-50%, -50%) scale(0.9)';
+        modalElement.style.opacity = '0';
+        
+        setTimeout(() => {
+          modalElement.style.display = 'none';
+          content.style.transform = 'translate(-50%, -50%) scale(1)';
+          document.body.style.overflow = 'auto';
+        }, 300);
+      };
+
+      // Open documents modal
+      openModalBtn.addEventListener('click', function() {
+        showModal(modal);
+        modal.focus();
+      });
+
+      // Close documents modal
+      const closeDocumentsModal = () => {
+        hideModal(modal);
+        setTimeout(() => openModalBtn.focus(), 300);
+      };
+
+      closeModalBtn.addEventListener('click', closeDocumentsModal);
+
+      // View PDF functionality
       document.querySelectorAll('.view-pdf').forEach(button => {
         button.addEventListener('click', function() {
           const pdfPath = this.getAttribute('data-pdf');
           const pdfTitle = this.getAttribute('data-title');
           
+          // Show loading state
+          this.style.opacity = '0.7';
+          this.style.pointerEvents = 'none';
+          
           // Set PDF modal content
           pdfModalTitle.textContent = pdfTitle || 'Document Viewer';
           modalPdf.src = pdfPath;
           
-          // Hide documents list modal
-          modal.style.display = 'none';
+          // Hide documents modal and show PDF modal
+          hideModal(modal);
           
-          // Show PDF modal
-          pdfModal.style.display = 'flex';
-          pdfModal.focus();
+          setTimeout(() => {
+            showModal(pdfModal);
+            pdfModal.focus();
+            
+            // Reset button state
+            this.style.opacity = '1';
+            this.style.pointerEvents = 'auto';
+          }, 300);
         });
       });
 
       // Close PDF modal
       const closePdfModal = () => {
-        pdfModal.style.display = 'none';
+        hideModal(pdfModal);
         modalPdf.src = '';
-        // Return to documents list modal
-        modal.style.display = 'flex';
-        modal.focus();
+        setTimeout(() => openModalBtn.focus(), 300);
+      };
+
+      // Back to documents
+      const backToDocuments = () => {
+        hideModal(pdfModal);
+        modalPdf.src = '';
+        setTimeout(() => {
+          showModal(modal);
+          modal.focus();
+        }, 300);
       };
 
       closePdfModalBtn.addEventListener('click', closePdfModal);
+      backToDocsBtn.addEventListener('click', backToDocuments);
 
-      // Close PDF modal when clicking outside
+      // Click outside to close
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+          closeDocumentsModal();
+        }
+      });
+
       pdfModal.addEventListener('click', function(e) {
-        if (e.target === pdfModal) {
+        if (e.target === pdfModal || e.target.classList.contains('modal-overlay')) {
           closePdfModal();
         }
       });
 
-      // Close modals with Escape key
+      // Keyboard navigation
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
           if (pdfModal.style.display === 'flex') {
             closePdfModal();
           } else if (modal.style.display === 'flex') {
-            closeModal();
+            closeDocumentsModal();
           }
         }
       });
 
-      // Track document access
-      document.querySelectorAll('.view-pdf').forEach(button => {
-        button.addEventListener('click', function() {
-          const docName = this.textContent.trim();
-          console.log(`Document accessed: ${docName}`);
+      // Add hover effects to document cards
+      document.querySelectorAll('.document-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-2px)';
+          this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+          this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
         });
       });
     });
   </script>
+
+  <!-- Enhanced Modal Styles -->
+  <style>
+    /* Professional Modal Styling */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+      position: relative;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow: hidden;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    .documents-modal {
+      width: 800px;
+    }
+
+    .pdf-modal {
+      width: 1000px;
+      height: 800px;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+      border-bottom: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    .modal-title-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .modal-icon {
+      color: #3b82f6;
+      font-size: 24px;
+    }
+
+    .modal-title-section h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-back-to-docs {
+      background: #f3f4f6;
+      border: 1px solid #d1d5db;
+      color: #374151;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-back-to-docs:hover {
+      background: #e5e7eb;
+      border-color: #9ca3af;
+    }
+
+    .close-modal, .close-pdf-modal {
+      background: none;
+      border: none;
+      color: #6b7280;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .close-modal:hover, .close-pdf-modal:hover {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    .modal-body {
+      padding: 30px;
+      overflow-y: auto;
+      max-height: calc(90vh - 80px);
+    }
+
+    .modal-description {
+      color: #6b7280;
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .documents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .document-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .doc-icon {
+      background: #fef3f2;
+      color: #dc2626;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .doc-info {
+      flex: 1;
+    }
+
+    .doc-info h3 {
+      margin: 0 0 4px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .doc-info p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .doc-action {
+      color: #9ca3af;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .pdf-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .documents-modal {
+        width: 95vw;
+        margin: 20px;
+      }
+
+      .pdf-modal {
+        width: 95vw;
+        height: 80vh;
+        margin: 20px;
+      }
+
+      .documents-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-header {
+        padding: 15px 20px;
+      }
+
+      .modal-body {
+        padding: 20px;
+      }
+
+      #modal-pdf {
+        height: 500px;
+      }
+    }
+  </style>
 </body>
 </html>
