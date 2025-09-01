@@ -3,77 +3,540 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Certifications and Professional Activities of M Mohinur Rahman Rabby - Chemical and Food Process Engineer" />
+  <meta name="keywords" content="Chemical Engineering Certifications, Professional Activities, M Mohinur Rahman Rabby" />
+  <meta name="author" content="M Mohinur Rahman Rabby" />
+  
   <title>Certifications & Activities | M Mohinur Rahman Rabby</title>
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/9e7b6e77e8.js" crossorigin="anonymous"></script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Certifications & Activities | M Mohinur Rahman Rabby" />
+  <meta property="og:description" content="Professional certifications and activities in Chemical and Food Process Engineering" />
+  <meta property="og:image" content="assets/images/profile_picture.jpg" />
 </head>
+
 <body>
+  <!-- Header -->
   <header>
-    <h1>Certifications & Activities</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="miscellaneous.html" class="active">Certifications</a></li>
-        <li><a href="professional-experience.html">Experience</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <!-- User Info and Time Display -->
+      <div class="user-info">
+        <span class="user-login">Welcome, Sharmin8014</span>
+        <span class="current-time" aria-live="polite"></span>
+      </div>
+      
+      <!-- Logo Section -->
+      <div class="logo">
+        <h1>Certifications & Activities</h1>
+        <p class="subtitle">Professional Development & Recognition</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a></li>
+          <li><a href="education.html">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <span>Education</span>
+          </a></li>
+          <li><a href="research.html">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <span>Research</span>
+          </a></li>
+          <li><a href="miscellaneous.html" class="active" aria-current="page">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <span>Certifications</span>
+          </a></li>
+          <li><a href="professional-experience.html">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            <span>Experience</span>
+          </a></li>
+          <li><a href="contact.html">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section class="certifications-section">
-      <h2>ChemE Fest Certificate</h2>
-      <div class="certifications-grid">
-        <div class="cert-card">
-          <img src="assets/thumbnails/chemE_fest_thumbnail.jpg" alt="ChemE Fest Certificate" class="cert-thumbnail" />
-          <button class="view-pdf" data-pdf="assets/certificates/chemE_fest_certificate.pdf">View Certificate</button>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Professional Certifications & Activities</h1>
+        <p>
+          Continuous learning and professional development through industry certifications, 
+          conferences, and specialized training programs in chemical engineering and sustainable technologies.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Professional Certifications</h2>
+        
+        <div class="certifications-grid">
+          <!-- ChemE Fest Certificate -->
+          <div class="card cert-card">
+            <div class="cert-image">
+              <img src="assets/thumbnails/chemE_fest_thumbnail.jpg" 
+                   alt="ChemE Fest Certificate" 
+                   class="cert-thumbnail" 
+                   loading="lazy" />
+              <div class="cert-overlay">
+                <button class="view-pdf btn btn-primary" 
+                        data-pdf="assets/certificates/chemE_fest_certificate.pdf"
+                        data-title="ChemE Fest Certificate"
+                        aria-label="View ChemE Fest Certificate">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                  View Certificate
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">ChemE Fest Certificate</h3>
+              <p class="cert-description">
+                Participation certificate from ChemE Fest - a professional development 
+                event focused on chemical engineering innovations and industry best practices.
+              </p>
+              <div class="cert-meta">
+                <span class="cert-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  2024
+                </span>
+                <span class="cert-type">
+                  <i class="fas fa-award" aria-hidden="true"></i>
+                  Conference Participation
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Certification Cards -->
+          <div class="card cert-card">
+            <div class="cert-image">
+              <img src="assets/thumbnails/safety_training_thumbnail.jpg" 
+                   alt="Safety Training Certificate" 
+                   class="cert-thumbnail" 
+                   loading="lazy" />
+              <div class="cert-overlay">
+                <button class="view-pdf btn btn-primary" 
+                        data-pdf="assets/certificates/safety_training_certificate.pdf"
+                        data-title="Safety Training Certificate"
+                        aria-label="View Safety Training Certificate">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                  View Certificate
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Laboratory Safety Training</h3>
+              <p class="cert-description">
+                Comprehensive training in laboratory safety protocols, chemical handling, 
+                and risk assessment procedures for chemical engineering laboratories.
+              </p>
+              <div class="cert-meta">
+                <span class="cert-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  2023
+                </span>
+                <span class="cert-type">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                  Safety Certification
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card cert-card">
+            <div class="cert-image">
+              <img src="assets/thumbnails/research_methodology_thumbnail.jpg" 
+                   alt="Research Methodology Certificate" 
+                   class="cert-thumbnail" 
+                   loading="lazy" />
+              <div class="cert-overlay">
+                <button class="view-pdf btn btn-primary" 
+                        data-pdf="assets/certificates/research_methodology_certificate.pdf"
+                        data-title="Research Methodology Certificate"
+                        aria-label="View Research Methodology Certificate">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                  View Certificate
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Research Methodology & Ethics</h3>
+              <p class="cert-description">
+                Advanced training in research methodology, data analysis techniques, 
+                and ethical considerations in scientific research and publication.
+              </p>
+              <div class="cert-meta">
+                <span class="cert-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  2023
+                </span>
+                <span class="cert-type">
+                  <i class="fas fa-microscope" aria-hidden="true"></i>
+                  Research Training
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card cert-card">
+            <div class="cert-image">
+              <img src="assets/thumbnails/environmental_management_thumbnail.jpg" 
+                   alt="Environmental Management Certificate" 
+                   class="cert-thumbnail" 
+                   loading="lazy" />
+              <div class="cert-overlay">
+                <button class="view-pdf btn btn-primary" 
+                        data-pdf="assets/certificates/environmental_management_certificate.pdf"
+                        data-title="Environmental Management Certificate"
+                        aria-label="View Environmental Management Certificate">
+                  <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                  View Certificate
+                </button>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Environmental Management Systems</h3>
+              <p class="cert-description">
+                Certification in environmental management systems, sustainability practices, 
+                and regulatory compliance for chemical process industries.
+              </p>
+              <div class="cert-meta">
+                <span class="cert-date">
+                  <i class="fas fa-calendar" aria-hidden="true"></i>
+                  2024
+                </span>
+                <span class="cert-type">
+                  <i class="fas fa-leaf" aria-hidden="true"></i>
+                  Environmental Certification
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Activities Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Professional Activities & Memberships</h2>
+        
+        <div class="activities-grid">
+          <div class="card activity-card">
+            <div class="activity-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="card-title">Professional Societies</h3>
+            <div class="card-content">
+              <ul class="activity-list">
+                <li>Institution of Chemical Engineers (IChemE) - Student Member</li>
+                <li>Bangladesh Chemical Society - Member</li>
+                <li>American Institute of Chemical Engineers (AIChE) - Student Member</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card activity-card">
+            <div class="activity-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3 class="card-title">Workshops & Seminars</h3>
+            <div class="card-content">
+              <ul class="activity-list">
+                <li>Advanced Materials Characterization Workshop (2024)</li>
+                <li>Sustainable Chemical Processes Seminar (2023)</li>
+                <li>Nanotechnology in Environmental Engineering (2023)</li>
+                <li>Green Chemistry Principles Workshop (2022)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card activity-card">
+            <div class="activity-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3 class="card-title">Awards & Recognition</h3>
+            <div class="card-content">
+              <ul class="activity-list">
+                <li>Dean's List - Academic Excellence (2023, 2024)</li>
+                <li>Best Student Project Award - Environmental Engineering (2024)</li>
+                <li>Research Excellence Award - RUET (2024)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card activity-card">
+            <div class="activity-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="card-title">Volunteer Activities</h3>
+            <div class="card-content">
+              <ul class="activity-list">
+                <li>Environmental Awareness Campaign Coordinator</li>
+                <li>Student Mentor - Chemical Engineering Department</li>
+                <li>Science Fair Judge - Local High Schools</li>
+                <li>Community Water Quality Testing Volunteer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Development Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Continuous Learning & Skills Development</h2>
+        
+        <div class="skills-progress">
+          <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">FTIR-ATR Spectroscopy</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">FESEM Analysis</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">XRD Characterization</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Process Optimization</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Research Skills</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">Data Analysis</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="92%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Literature Review</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Technical Writing</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Project Management</span>
+                <div class="skill-bar">
+                  <div class="skill-progress-bar" data-width="87%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 M Mohinur Rahman Rabby</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 M Mohinur Rahman Rabby. All rights reserved.</p>
+        <p class="footer-meta">
+          <span class="utc-time" aria-live="polite"></span> | 
+          <span>Last updated: 2025-01-15</span>
+        </p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Modal for PDF Viewer -->
-  <div id="modal" class="modal">
+  <!-- PDF Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
     <div class="modal-content">
-      <button class="close-modal">&times;</button>
-      <h2>Full Certificate PDF</h2>
-      <iframe id="modal-pdf" src="" width="100%" height="600px"></iframe>
+      <div class="modal-header">
+        <h2 id="modal-title">Certificate Viewer</h2>
+        <button class="close-modal" aria-label="Close modal">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="modal-pdf" 
+                src="" 
+                title="Certificate PDF Viewer"
+                width="100%" 
+                height="600px"
+                style="border: none;">
+        </iframe>
+      </div>
     </div>
   </div>
 
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Page-specific JavaScript -->
   <script>
-    // Open the PDF modal when clicking the "View Certificate" button
-    document.querySelectorAll('.view-pdf').forEach(button => {
-      button.addEventListener('click', () => {
-        const pdfPath = button.getAttribute('data-pdf');
-        const modal = document.getElementById('modal');
-        const modalPdf = document.getElementById('modal-pdf');
-        modalPdf.src = pdfPath;  // Set the PDF source
-        modal.style.display = 'flex';  // Show the modal
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set current time in UTC format: 2025-09-01 17:22:20
+      const updateTime = () => {
+        const now = new Date();
+        const year = now.getUTCFullYear();
+        const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+        const day = String(now.getUTCDate()).padStart(2, '0');
+        const hours = String(now.getUTCHours()).padStart(2, '0');
+        const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+        const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+        
+        const utcTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        
+        const timeElements = document.querySelectorAll('.current-time, .utc-time');
+        timeElements.forEach(el => {
+          el.textContent = utcTime;
+        });
+      };
+      
+      updateTime();
+      setInterval(updateTime, 1000);
+
+      // Highlight active navigation
+      const currentPage = window.location.pathname.split('/').pop() || 'miscellaneous.html';
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+        
+        if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
       });
-    });
 
-    // Close the modal when the close button is clicked
-    document.querySelector('.close-modal').addEventListener('click', () => {
-      const modal = document.getElementById('modal');
-      const modalPdf = document.getElementById('modal-pdf');
-      modal.style.display = 'none';  // Hide the modal
-      modalPdf.src = ''; // Clear the PDF source when closing
-    });
+      // Animate skill progress bars
+      const animateSkillBars = () => {
+        const skillBars = document.querySelectorAll('.skill-progress-bar');
+        skillBars.forEach(bar => {
+          const targetWidth = bar.getAttribute('data-width');
+          bar.style.width = targetWidth;
+        });
+      };
 
-    // Close the modal if the user clicks outside the modal content
-    document.getElementById('modal').addEventListener('click', (e) => {
-      if (e.target === document.getElementById('modal')) {
+      // Trigger skill bar animation when section is visible
+      const skillsSection = document.querySelector('.skills-progress');
+      if (skillsSection) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateSkillBars();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        observer.observe(skillsSection);
+      }
+
+      // Enhanced PDF modal functionality
+      document.querySelectorAll('.view-pdf').forEach(button => {
+        button.addEventListener('click', function() {
+          const pdfPath = this.getAttribute('data-pdf');
+          const pdfTitle = this.getAttribute('data-title');
+          const modal = document.getElementById('modal');
+          const modalPdf = document.getElementById('modal-pdf');
+          const modalTitle = document.getElementById('modal-title');
+          
+          // Set modal content
+          modalTitle.textContent = pdfTitle || 'Certificate Viewer';
+          modalPdf.src = pdfPath;
+          
+          // Show modal with animation
+          modal.style.display = 'flex';
+          modal.style.opacity = '0';
+          setTimeout(() => {
+            modal.style.opacity = '1';
+          }, 10);
+          
+          // Focus management for accessibility
+          modal.focus();
+        });
+      });
+
+      // Close modal functionality
+      const closeModal = () => {
         const modal = document.getElementById('modal');
         const modalPdf = document.getElementById('modal-pdf');
-        modal.style.display = 'none';  // Hide the modal
-        modalPdf.src = ''; // Clear the PDF source when closing
-      }
+        
+        modal.style.opacity = '0';
+        setTimeout(() => {
+          modal.style.display = 'none';
+          modalPdf.src = '';
+        }, 300);
+      };
+
+      // Close button
+      document.querySelector('.close-modal').addEventListener('click', closeModal);
+
+      // Click outside modal
+      document.getElementById('modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+
+      // Escape key to close modal
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('modal');
+          if (modal.style.display === 'flex') {
+            closeModal();
+          }
+        }
+      });
     });
   </script>
 </body>
